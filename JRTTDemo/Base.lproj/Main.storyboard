@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="JnL-SL-qqH">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="h2E-Zj-BrO">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -13,7 +13,7 @@
         <!--仿今日头条-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="HomeViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -26,7 +26,7 @@
                                 </constraints>
                             </view>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ufU-rX-dwB">
-                                <rect key="frame" x="0.0" y="101" width="375" height="566"/>
+                                <rect key="frame" x="0.0" y="101" width="375" height="517"/>
                                 <color key="backgroundColor" red="1" green="1" blue="0.49366629464285716" alpha="1" colorSpace="calibratedRGB"/>
                             </scrollView>
                         </subviews>
@@ -50,7 +50,59 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="910" y="134"/>
+            <point key="canvasLocation" x="1644" y="-1639"/>
+        </scene>
+        <!--微头条-->
+        <scene sceneID="Y8r-dg-oyb">
+            <objects>
+                <viewController id="jGC-qX-662" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="UNr-Su-zQK">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="t6u-6f-mVC"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="微头条" image="weitoutiao_tabbar" selectedImage="weitoutiao_tabbar_press" id="wDB-3O-hdS" customClass="JRTTabBarItem"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dgb-KW-OqA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="878" y="-313"/>
+        </scene>
+        <!--西瓜视频-->
+        <scene sceneID="BkX-gJ-TOj">
+            <objects>
+                <viewController id="1ij-nb-xAH" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="L2j-xB-dzl">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="TRy-j8-c7l"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="西瓜视频" image="video_tabbar" selectedImage="video_tabbar_press" id="taU-Cw-8FZ" customClass="JRTTabBarItem"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dos-FF-k9y" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="878" y="-973"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="g2W-HD-T5b">
+            <objects>
+                <tabBarController id="h2E-Zj-BrO" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="qfb-Eg-pel">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="JnL-SL-qqH" kind="relationship" relationship="viewControllers" id="DiU-RP-ucX"/>
+                        <segue destination="jGC-qX-662" kind="relationship" relationship="viewControllers" id="cgM-6K-tU8"/>
+                        <segue destination="1ij-nb-xAH" kind="relationship" relationship="viewControllers" id="BJr-JK-uiD"/>
+                        <segue destination="YGl-qu-ccD" kind="relationship" relationship="viewControllers" id="Me4-Db-95y"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Gpj-NW-WwS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="161" y="-641"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Mdk-Sc-BkE">
@@ -65,12 +117,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZKW-0b-lnL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1612" y="-37"/>
+            <point key="canvasLocation" x="2425" y="-63"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--首页-->
         <scene sceneID="niT-yv-e8I">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="JnL-SL-qqH" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="首页" image="home_tabbar" largeContentSizeImage="home_tabbar" selectedImage="home_tabbar_press" springLoaded="YES" id="ygS-9e-xxU" customClass="JRTTabBarItem"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="eVh-Ik-jpc">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -83,7 +136,33 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aTL-EH-iYc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-38" y="134"/>
+            <point key="canvasLocation" x="878" y="-1639"/>
+        </scene>
+        <!--小视频-->
+        <scene sceneID="5Mn-uN-XJ1">
+            <objects>
+                <viewController id="YGl-qu-ccD" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Vdp-p5-tmC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="LpS-Bv-BEN"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="小视频" image="tab_huoshan_logo_night" selectedImage="tab_huoshan_logo" id="yVG-TF-C1Z" customClass="JRTTabBarItem"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3bi-ps-CGC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="878" y="344"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="home_tabbar" width="32" height="32"/>
+        <image name="home_tabbar_press" width="32" height="32"/>
+        <image name="tab_huoshan_logo" width="14" height="17"/>
+        <image name="tab_huoshan_logo_night" width="14" height="17"/>
+        <image name="video_tabbar" width="32" height="32"/>
+        <image name="video_tabbar_press" width="32" height="32"/>
+        <image name="weitoutiao_tabbar" width="32" height="32"/>
+        <image name="weitoutiao_tabbar_press" width="32" height="32"/>
+    </resources>
 </document>

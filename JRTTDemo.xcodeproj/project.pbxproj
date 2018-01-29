@@ -12,8 +12,10 @@
 		FE20BD01201AD66B00BA07C8 /* HomeMenuCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FE20BCFF201AD66B00BA07C8 /* HomeMenuCollectionViewCell.m */; };
 		FE20BD02201AD66B00BA07C8 /* HomeMenuCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE20BD00201AD66B00BA07C8 /* HomeMenuCollectionViewCell.xib */; };
 		FE20BD07201AE9EB00BA07C8 /* CDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE20BD06201AE9EB00BA07C8 /* CDViewController.m */; };
+		FE4D2032201F004000FBD21D /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE4D2031201F004000FBD21D /* HomeViewController.m */; };
+		FE4D203B201F0B9200FBD21D /* HomeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FE4D203A201F0B9200FBD21D /* HomeModel.m */; };
+		FEA35730201EBA2C009BDA4E /* JRTTabBarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = FEA3572F201EBA2C009BDA4E /* JRTTabBarItem.m */; };
 		FEE204C1201AC8D900E25B61 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FEE204C0201AC8D900E25B61 /* AppDelegate.m */; };
-		FEE204C4201AC8D900E25B61 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEE204C3201AC8D900E25B61 /* ViewController.m */; };
 		FEE204C7201AC8D900E25B61 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEE204C5201AC8D900E25B61 /* Main.storyboard */; };
 		FEE204C9201AC8D900E25B61 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FEE204C8201AC8D900E25B61 /* Assets.xcassets */; };
 		FEE204CC201AC8D900E25B61 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEE204CA201AC8D900E25B61 /* LaunchScreen.storyboard */; };
@@ -54,11 +56,15 @@
 		FE20BD05201AE9EB00BA07C8 /* CDViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CDViewController.h; sourceTree = "<group>"; };
 		FE20BD06201AE9EB00BA07C8 /* CDViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CDViewController.m; sourceTree = "<group>"; };
 		FE20BD0A201B000B00BA07C8 /* MarcHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MarcHeader.h; sourceTree = "<group>"; };
+		FE4D2030201F004000FBD21D /* HomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		FE4D2031201F004000FBD21D /* HomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		FE4D2039201F0B9200FBD21D /* HomeModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeModel.h; sourceTree = "<group>"; };
+		FE4D203A201F0B9200FBD21D /* HomeModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeModel.m; sourceTree = "<group>"; };
+		FEA3572E201EBA2C009BDA4E /* JRTTabBarItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JRTTabBarItem.h; sourceTree = "<group>"; };
+		FEA3572F201EBA2C009BDA4E /* JRTTabBarItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JRTTabBarItem.m; sourceTree = "<group>"; };
 		FEE204BC201AC8D900E25B61 /* JRTTDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JRTTDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEE204BF201AC8D900E25B61 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		FEE204C0201AC8D900E25B61 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		FEE204C2201AC8D900E25B61 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		FEE204C3201AC8D900E25B61 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		FEE204C6201AC8D900E25B61 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FEE204C8201AC8D900E25B61 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FEE204CB201AC8D900E25B61 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -122,6 +128,8 @@
 		FE20BD04201AE98200BA07C8 /* ChilderVC */ = {
 			isa = PBXGroup;
 			children = (
+				FE4D203C201F0C0000FBD21D /* View */,
+				FE4D2038201F0B6200FBD21D /* model */,
 				FE20BD05201AE9EB00BA07C8 /* CDViewController.h */,
 				FE20BD06201AE9EB00BA07C8 /* CDViewController.m */,
 			);
@@ -134,6 +142,50 @@
 				FE20BD0A201B000B00BA07C8 /* MarcHeader.h */,
 			);
 			path = Marc;
+			sourceTree = "<group>";
+		};
+		FE4D202F201F002400FBD21D /* Class */ = {
+			isa = PBXGroup;
+			children = (
+				FE4D2033201F009100FBD21D /* Home */,
+			);
+			path = Class;
+			sourceTree = "<group>";
+		};
+		FE4D2033201F009100FBD21D /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				FE20BD04201AE98200BA07C8 /* ChilderVC */,
+				FEE204F3201ACBD500E25B61 /* view */,
+				FE4D2030201F004000FBD21D /* HomeViewController.h */,
+				FE4D2031201F004000FBD21D /* HomeViewController.m */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		FE4D2038201F0B6200FBD21D /* model */ = {
+			isa = PBXGroup;
+			children = (
+				FE4D2039201F0B9200FBD21D /* HomeModel.h */,
+				FE4D203A201F0B9200FBD21D /* HomeModel.m */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		FE4D203C201F0C0000FBD21D /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FEA3572D201EB526009BDA4E /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				FEA3572E201EBA2C009BDA4E /* JRTTabBarItem.h */,
+				FEA3572F201EBA2C009BDA4E /* JRTTabBarItem.m */,
+			);
+			path = Tool;
 			sourceTree = "<group>";
 		};
 		FEE204B3201AC8D900E25B61 = {
@@ -161,15 +213,13 @@
 		FEE204BE201AC8D900E25B61 /* JRTTDemo */ = {
 			isa = PBXGroup;
 			children = (
-				FE20BD08201AFFAF00BA07C8 /* Marc */,
-				FE20BD04201AE98200BA07C8 /* ChilderVC */,
+				FE4D202F201F002400FBD21D /* Class */,
+				FEA3572D201EB526009BDA4E /* Tool */,
 				FEE204F9201ACF8C00E25B61 /* file */,
-				FEE204F3201ACBD500E25B61 /* view */,
+				FE20BD08201AFFAF00BA07C8 /* Marc */,
 				FEE204F1201AC9D900E25B61 /* Resource */,
 				FEE204BF201AC8D900E25B61 /* AppDelegate.h */,
 				FEE204C0201AC8D900E25B61 /* AppDelegate.m */,
-				FEE204C2201AC8D900E25B61 /* ViewController.h */,
-				FEE204C3201AC8D900E25B61 /* ViewController.m */,
 				FEE204C5201AC8D900E25B61 /* Main.storyboard */,
 				FEE204C8201AC8D900E25B61 /* Assets.xcassets */,
 				FEE204CA201AC8D900E25B61 /* LaunchScreen.storyboard */,
@@ -435,11 +485,13 @@
 			files = (
 				FE20BD07201AE9EB00BA07C8 /* CDViewController.m in Sources */,
 				FE20BD01201AD66B00BA07C8 /* HomeMenuCollectionViewCell.m in Sources */,
-				FEE204C4201AC8D900E25B61 /* ViewController.m in Sources */,
 				FE20BCFD201AD2A300BA07C8 /* CollectionViewModel.m in Sources */,
 				FEE204CF201AC8D900E25B61 /* main.m in Sources */,
+				FE4D2032201F004000FBD21D /* HomeViewController.m in Sources */,
+				FEA35730201EBA2C009BDA4E /* JRTTabBarItem.m in Sources */,
 				FEE204F6201ACC0800E25B61 /* HomeMenuView.m in Sources */,
 				FEE204C1201AC8D900E25B61 /* AppDelegate.m in Sources */,
+				FE4D203B201F0B9200FBD21D /* HomeModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

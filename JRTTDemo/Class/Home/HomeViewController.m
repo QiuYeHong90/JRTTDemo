@@ -1,16 +1,16 @@
 //
-//  ViewController.m
+//  HomeViewController.m
 //  JRTTDemo
 //
-//  Created by 赵 on 2018/1/26.
+//  Created by 赵 on 2018/1/29.
 //  Copyright © 2018年 袁书辉. All rights reserved.
 //
-
 #import "HomeMenuCollectionViewCell.h"
 #import "HomeMenuView.h"
-#import "ViewController.h"
 
-@interface ViewController ()<UIScrollViewDelegate>
+#import "HomeViewController.h"
+
+@interface HomeViewController ()
 @property (weak, nonatomic) IBOutlet UIView *MenuBottomView;
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 
@@ -22,7 +22,8 @@
 @property (nonatomic,assign) BOOL isShou;
 @end
 
-@implementation ViewController
+@implementation HomeViewController
+
 -(HomeMenuView *)menuView
 {
     if(!_menuView){
@@ -50,7 +51,7 @@
         make.bottom.equalTo(weakSelf.MenuBottomView).offset(-1);
     }];
     [self.menuView.viewModel updateData:tempArray];
-//    跟视图控制器
+    //    跟视图控制器
     self.scrollView.delegate = self;
     self.scrollView.bounces = NO;
     for (NSString * dd in tempArray) {
@@ -69,7 +70,7 @@
 -(void)changeVC:(NSInteger)idx
 {
     CGFloat left = idx*SCREEN_WIDTH;
-     [self.scrollView setContentOffset:CGPointMake(left, 0) animated:YES];
+    [self.scrollView setContentOffset:CGPointMake(left, 0) animated:YES];
     
     [self addVC:idx];
 }
@@ -97,7 +98,7 @@
         return;
         
     }
-//    scrollView
+    //    scrollView
     
     CGFloat idx = scrollView.contentOffset.x/SCREEN_WIDTH;
     
@@ -106,11 +107,11 @@
     if (idx-self.selectedIdx>0&&idx-self.selectedIdx<1) {
         if (idx+1<=self.childViewControllers.count) {
             [self addVC:idx+1];
-             CGFloat d =fabsf(idx-self.selectedIdx) ;
+            CGFloat d =fabsf(idx-self.selectedIdx) ;
             NSLog(@"====%f",d);
             HomeMenuCollectionViewCell * cell1 = [self getCellWithIdex:self.selectedIdx+1];
             HomeMenuCollectionViewCell * cell = [self getCellWithIdex:self.selectedIdx];
-
+            
             [self fromCell:cell toCell1:cell1 d:d];
             
         }
@@ -153,12 +154,12 @@
 {
     NSInteger idx = scrollView.contentOffset.x/SCREEN_WIDTH;
     
-//    HomeMenuCollectionViewCell * cell1 = [self getCellWithIdex:self.selectedIdx];
-//    cell1.selected = NO;
+    //    HomeMenuCollectionViewCell * cell1 = [self getCellWithIdex:self.selectedIdx];
+    //    cell1.selected = NO;
     
     self.selectedIdx = idx;
     [self.menuView clickIdx:idx];
-
+    
 }
 
 
@@ -167,5 +168,14 @@
     // Dispose of any resources that can be recreated.
 }
 
+/*
+#pragma mark - Navigation
+
+// In a storyboard-based application, you will often want to do a little preparation before navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
+}
+*/
 
 @end

@@ -15,5 +15,8 @@
 
 #import <CommonElement.h>
 
+#import <AFNetworking.h>
+#import <PPNetworkHelper.h>
+#import <YYModel.h>
 
 #endif /* PrefixHeader_pch */

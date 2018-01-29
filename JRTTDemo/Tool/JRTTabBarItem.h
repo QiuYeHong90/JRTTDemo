@@ -1,16 +1,13 @@
 //
-//  ViewController.h
+//  JRTTabBarItem.h
 //  JRTTDemo
 //
-//  Created by 赵 on 2018/1/26.
+//  Created by 赵 on 2018/1/29.
 //  Copyright © 2018年 袁书辉. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
-
+@interface JRTTabBarItem : UITabBarItem
 
 @end
-
