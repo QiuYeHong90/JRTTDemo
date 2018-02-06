@@ -6,20 +6,16 @@
 //  Copyright © 2018年 袁书辉. All rights reserved.
 //
 
-#import "ReactiveView.h"
-#import <Foundation/Foundation.h>
 
-typedef void(^didSelectedBlock)(NSIndexPath *idxPath,NSMutableArray *dataArray);
-
-@interface CollectionViewModel : NSObject
+#import "BaseCollectionViewModel.h"
 
 
--(void)setCollectionView:(UICollectionView *)collectionView
-              datayArray:(NSMutableArray *)datayArray
-           cellIdentifer:(NSString *)cellIdentifer
-        didSelectedBlock:(didSelectedBlock)didSelectedBlock;
+
+@interface CollectionViewModel : BaseCollectionViewModel
+
+
+
 -(void)clickIdx:(NSInteger)idx;
 
--(void)updateData:(NSMutableArray *)dataArray;
 
 @end

@@ -8,59 +8,28 @@
 
 #import "CollectionViewModel.h"
 
-@interface CollectionViewModel()<UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout>
+@interface CollectionViewModel()
 
-@property (nonatomic,weak) UICollectionView * collectionView;
-@property (nonatomic,copy) NSString * cellIdentifer;
-@property (nonatomic,strong) NSMutableArray * dataArray;
-@property (nonatomic,copy) didSelectedBlock callBlock;
+
 
 @property (nonatomic,assign) NSInteger selectedIdx;
 @end
 
 @implementation CollectionViewModel
 
--(NSMutableArray *)dataArray
-{
-    if (!_dataArray) {
-        _dataArray = @[].mutableCopy;
-    }
-    return _dataArray;
-}
 
--(void)setCollectionView:(UICollectionView *)collectionView
-              datayArray:(NSMutableArray *)datayArray
-           cellIdentifer:(NSString *)cellIdentifer
-        didSelectedBlock:(didSelectedBlock)didSelectedBlock
-{
-    self.cellIdentifer = cellIdentifer;
-    self.collectionView = collectionView;
-    [self registerCell];
-    self.collectionView.delegate = self;
-    self.collectionView.dataSource = self;
-    self.dataArray = datayArray;
-    self.callBlock = didSelectedBlock;
-    
-    
-}
 
--(void)registerCell
-{
-    [self.collectionView registerNib:[UINib nibWithNibName:self.cellIdentifer bundle:[NSBundle mainBundle]] forCellWithReuseIdentifier:self.cellIdentifer];
-}
 
-- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section;
-{
-    return self.dataArray.count;
-}
 - (__kindof UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 
 {
-    UICollectionViewCell <ReactiveView>* cell = [collectionView dequeueReusableCellWithReuseIdentifier:self.cellIdentifer forIndexPath:indexPath];
-    [cell bindData:self.dataArray indexPath:indexPath];
+    UICollectionViewCell * cell  = [super collectionView:collectionView cellForItemAtIndexPath:indexPath];
     cell.selected  = self.selectedIdx == indexPath.row;
     return cell;
 }
+
+
+
 
 -(void)clickIdx:(NSInteger)idx
 {
@@ -99,10 +68,6 @@
     return UIEdgeInsetsMake(0, 0, 0, 40);
 }
 
--(void)updateData:(NSMutableArray *)dataArray
-{
-    self.dataArray = dataArray;
-    [self.collectionView reloadData];
-}
+
 
 @end

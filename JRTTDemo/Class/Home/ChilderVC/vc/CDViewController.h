@@ -6,8 +6,8 @@
 //  Copyright © 2018年 袁书辉. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "BaseChirldViewController.h"
 
-@interface CDViewController : UIViewController
-@property (nonatomic,strong) T1Data * tModel111;
+@interface CDViewController :BaseChirldViewController
+
 @end

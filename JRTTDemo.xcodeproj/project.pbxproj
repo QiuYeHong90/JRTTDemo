@@ -29,6 +29,14 @@
 		FEB59FC8202988840003676D /* UIViewController+addA.m in Sources */ = {isa = PBXBuildFile; fileRef = FEB59FC7202988840003676D /* UIViewController+addA.m */; };
 		FEB59FCA20298F3A0003676D /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = FEB59FC920298F3A0003676D /* README.md */; };
 		FEB59FCC20298F510003676D /* JRTT.gif in Resources */ = {isa = PBXBuildFile; fileRef = FEB59FCB20298F510003676D /* JRTT.gif */; };
+		FEB59FD020299B880003676D /* SmallVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEB59FCF20299B880003676D /* SmallVideoViewController.m */; };
+		FEB59FD320299BAB0003676D /* BaseChirldViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEB59FD220299BAB0003676D /* BaseChirldViewController.m */; };
+		FEB59FD920299ED10003676D /* SmalVideoCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FEB59FD720299ED10003676D /* SmalVideoCollectionViewCell.m */; };
+		FEB59FDA20299ED10003676D /* SmalVideoCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FEB59FD820299ED10003676D /* SmalVideoCollectionViewCell.xib */; };
+		FEB59FDD2029A1E00003676D /* SmallVideoViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FEB59FDC2029A1E00003676D /* SmallVideoViewModel.m */; };
+		FEB59FE22029A23B0003676D /* BaseCollectionViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FEB59FE12029A23B0003676D /* BaseCollectionViewModel.m */; };
+		FEB59FE42029B8330003676D /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEB59FE32029B8330003676D /* AVKit.framework */; };
+		FEB59FE62029B8480003676D /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEB59FE52029B8480003676D /* AVFoundation.framework */; };
 		FEE204C1201AC8D900E25B61 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FEE204C0201AC8D900E25B61 /* AppDelegate.m */; };
 		FEE204C7201AC8D900E25B61 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEE204C5201AC8D900E25B61 /* Main.storyboard */; };
 		FEE204C9201AC8D900E25B61 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FEE204C8201AC8D900E25B61 /* Assets.xcassets */; };
@@ -99,6 +107,19 @@
 		FEB59FC7202988840003676D /* UIViewController+addA.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+addA.m"; sourceTree = "<group>"; };
 		FEB59FC920298F3A0003676D /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		FEB59FCB20298F510003676D /* JRTT.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = JRTT.gif; sourceTree = "<group>"; };
+		FEB59FCE20299B880003676D /* SmallVideoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SmallVideoViewController.h; sourceTree = "<group>"; };
+		FEB59FCF20299B880003676D /* SmallVideoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SmallVideoViewController.m; sourceTree = "<group>"; };
+		FEB59FD120299BAB0003676D /* BaseChirldViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseChirldViewController.h; sourceTree = "<group>"; };
+		FEB59FD220299BAB0003676D /* BaseChirldViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseChirldViewController.m; sourceTree = "<group>"; };
+		FEB59FD620299ED10003676D /* SmalVideoCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SmalVideoCollectionViewCell.h; sourceTree = "<group>"; };
+		FEB59FD720299ED10003676D /* SmalVideoCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SmalVideoCollectionViewCell.m; sourceTree = "<group>"; };
+		FEB59FD820299ED10003676D /* SmalVideoCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SmalVideoCollectionViewCell.xib; sourceTree = "<group>"; };
+		FEB59FDB2029A1E00003676D /* SmallVideoViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SmallVideoViewModel.h; sourceTree = "<group>"; };
+		FEB59FDC2029A1E00003676D /* SmallVideoViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SmallVideoViewModel.m; sourceTree = "<group>"; };
+		FEB59FE02029A23B0003676D /* BaseCollectionViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseCollectionViewModel.h; sourceTree = "<group>"; };
+		FEB59FE12029A23B0003676D /* BaseCollectionViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseCollectionViewModel.m; sourceTree = "<group>"; };
+		FEB59FE32029B8330003676D /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
+		FEB59FE52029B8480003676D /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		FEE204BC201AC8D900E25B61 /* JRTTDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JRTTDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEE204BF201AC8D900E25B61 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		FEE204C0201AC8D900E25B61 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -124,6 +145,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FEB59FE62029B8480003676D /* AVFoundation.framework in Frameworks */,
+				FEB59FE42029B8330003676D /* AVKit.framework in Frameworks */,
 				B8DABD8D00B5F5DDC49853A3 /* libPods-JRTTDemo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -157,6 +180,8 @@
 		5212A8E45DC9436A08E6C6EA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FEB59FE52029B8480003676D /* AVFoundation.framework */,
+				FEB59FE32029B8330003676D /* AVKit.framework */,
 				A1F97B3F299A2789E3B86AF6 /* libPods-JRTTDemo.a */,
 			);
 			name = Frameworks;
@@ -165,11 +190,10 @@
 		FE20BD04201AE98200BA07C8 /* ChilderVC */ = {
 			isa = PBXGroup;
 			children = (
+				FEB59FCD20299B200003676D /* vc */,
 				FEB59FB120293BFA0003676D /* ViewModel */,
 				FE4D203C201F0C0000FBD21D /* View */,
 				FE4D2038201F0B6200FBD21D /* model */,
-				FE20BD05201AE9EB00BA07C8 /* CDViewController.h */,
-				FE20BD06201AE9EB00BA07C8 /* CDViewController.m */,
 			);
 			path = ChilderVC;
 			sourceTree = "<group>";
@@ -185,6 +209,7 @@
 		FE4D202F201F002400FBD21D /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				FEB59FDE2029A2200003676D /* Base */,
 				FE4D2033201F009100FBD21D /* Home */,
 			);
 			path = Class;
@@ -216,17 +241,8 @@
 		FE4D203C201F0C0000FBD21D /* View */ = {
 			isa = PBXGroup;
 			children = (
-				FEB59FAC202936290003676D /* ImgLeftTableViewCell.h */,
-				FEB59FAD202936290003676D /* ImgLeftTableViewCell.m */,
-				FEB59FAE202936290003676D /* ImgLeftTableViewCell.xib */,
-				FEB59FB5202950AF0003676D /* ImgBottomTableViewCell.h */,
-				FEB59FB6202950AF0003676D /* ImgBottomTableViewCell.m */,
-				FEB59FB7202950AF0003676D /* ImgBottomTableViewCell.xib */,
-				FEB59FBD20295E5A0003676D /* ImgBottomOneTableViewCell.h */,
-				FEB59FBE20295E5A0003676D /* ImgBottomOneTableViewCell.m */,
-				FEB59FBF20295E5A0003676D /* ImgBottomOneTableViewCell.xib */,
-				FEB59FBA202952960003676D /* TWTableViewCell.h */,
-				FEB59FBB202952960003676D /* TWTableViewCell.m */,
+				FEB59FD520299EAD0003676D /* CollectionCell */,
+				FEB59FD420299E6A0003676D /* tableCell */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -256,6 +272,8 @@
 		FEB59FB120293BFA0003676D /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				FEB59FDB2029A1E00003676D /* SmallVideoViewModel.h */,
+				FEB59FDC2029A1E00003676D /* SmallVideoViewModel.m */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -267,6 +285,65 @@
 				FEB59FC4202980740003676D /* TitleModel.m */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		FEB59FCD20299B200003676D /* vc */ = {
+			isa = PBXGroup;
+			children = (
+				FE20BD05201AE9EB00BA07C8 /* CDViewController.h */,
+				FE20BD06201AE9EB00BA07C8 /* CDViewController.m */,
+				FEB59FCE20299B880003676D /* SmallVideoViewController.h */,
+				FEB59FCF20299B880003676D /* SmallVideoViewController.m */,
+				FEB59FD120299BAB0003676D /* BaseChirldViewController.h */,
+				FEB59FD220299BAB0003676D /* BaseChirldViewController.m */,
+			);
+			path = vc;
+			sourceTree = "<group>";
+		};
+		FEB59FD420299E6A0003676D /* tableCell */ = {
+			isa = PBXGroup;
+			children = (
+				FEB59FBA202952960003676D /* TWTableViewCell.h */,
+				FEB59FBB202952960003676D /* TWTableViewCell.m */,
+				FEB59FAC202936290003676D /* ImgLeftTableViewCell.h */,
+				FEB59FAD202936290003676D /* ImgLeftTableViewCell.m */,
+				FEB59FAE202936290003676D /* ImgLeftTableViewCell.xib */,
+				FEB59FB5202950AF0003676D /* ImgBottomTableViewCell.h */,
+				FEB59FB6202950AF0003676D /* ImgBottomTableViewCell.m */,
+				FEB59FB7202950AF0003676D /* ImgBottomTableViewCell.xib */,
+				FEB59FBD20295E5A0003676D /* ImgBottomOneTableViewCell.h */,
+				FEB59FBE20295E5A0003676D /* ImgBottomOneTableViewCell.m */,
+				FEB59FBF20295E5A0003676D /* ImgBottomOneTableViewCell.xib */,
+			);
+			path = tableCell;
+			sourceTree = "<group>";
+		};
+		FEB59FD520299EAD0003676D /* CollectionCell */ = {
+			isa = PBXGroup;
+			children = (
+				FEB59FD620299ED10003676D /* SmalVideoCollectionViewCell.h */,
+				FEB59FD720299ED10003676D /* SmalVideoCollectionViewCell.m */,
+				FEB59FD820299ED10003676D /* SmalVideoCollectionViewCell.xib */,
+			);
+			path = CollectionCell;
+			sourceTree = "<group>";
+		};
+		FEB59FDE2029A2200003676D /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				FEB59FDF2029A2290003676D /* ViewModel */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		FEB59FDF2029A2290003676D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				FE20BD03201AD77700BA07C8 /* ReactiveView.h */,
+				FEB59FE02029A23B0003676D /* BaseCollectionViewModel.h */,
+				FEB59FE12029A23B0003676D /* BaseCollectionViewModel.m */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		FEE204B3201AC8D900E25B61 = {
@@ -373,7 +450,6 @@
 				FE20BCFE201AD66B00BA07C8 /* HomeMenuCollectionViewCell.h */,
 				FE20BCFF201AD66B00BA07C8 /* HomeMenuCollectionViewCell.m */,
 				FE20BD00201AD66B00BA07C8 /* HomeMenuCollectionViewCell.xib */,
-				FE20BD03201AD77700BA07C8 /* ReactiveView.h */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -490,6 +566,7 @@
 				FE20BD02201AD66B00BA07C8 /* HomeMenuCollectionViewCell.xib in Resources */,
 				FEE204CC201AC8D900E25B61 /* LaunchScreen.storyboard in Resources */,
 				FEB59FB9202950AF0003676D /* ImgBottomTableViewCell.xib in Resources */,
+				FEB59FDA20299ED10003676D /* SmalVideoCollectionViewCell.xib in Resources */,
 				FEB59FB0202936290003676D /* ImgLeftTableViewCell.xib in Resources */,
 				FEE204C9201AC8D900E25B61 /* Assets.xcassets in Resources */,
 				FEB59FC120295E5A0003676D /* ImgBottomOneTableViewCell.xib in Resources */,
@@ -575,13 +652,18 @@
 				FEB59FC8202988840003676D /* UIViewController+addA.m in Sources */,
 				FE20BD07201AE9EB00BA07C8 /* CDViewController.m in Sources */,
 				FE20BD01201AD66B00BA07C8 /* HomeMenuCollectionViewCell.m in Sources */,
+				FEB59FD920299ED10003676D /* SmalVideoCollectionViewCell.m in Sources */,
+				FEB59FDD2029A1E00003676D /* SmallVideoViewModel.m in Sources */,
 				FEB59FB8202950AF0003676D /* ImgBottomTableViewCell.m in Sources */,
 				FEB59FBC202952960003676D /* TWTableViewCell.m in Sources */,
+				FEB59FE22029A23B0003676D /* BaseCollectionViewModel.m in Sources */,
 				FE75C7F82028457E003C7D68 /* HttpHelper.m in Sources */,
 				FE20BCFD201AD2A300BA07C8 /* CollectionViewModel.m in Sources */,
 				FEE204CF201AC8D900E25B61 /* main.m in Sources */,
 				FE4D2032201F004000FBD21D /* HomeViewController.m in Sources */,
+				FEB59FD320299BAB0003676D /* BaseChirldViewController.m in Sources */,
 				FE75C7EF20280D5B003C7D68 /* DataModel.m in Sources */,
+				FEB59FD020299B880003676D /* SmallVideoViewController.m in Sources */,
 				FEB59FAF202936290003676D /* ImgLeftTableViewCell.m in Sources */,
 				FEA6A00F20207B7F0079667F /* NSString+Date.m in Sources */,
 				FEB59FC5202980740003676D /* TitleModel.m in Sources */,

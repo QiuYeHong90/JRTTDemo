@@ -105,7 +105,13 @@
     }
     
     for (T1Data * dd in self.titleArray) {
-        UIViewController * vc  = [self.storyboard instantiateViewControllerWithIdentifier:@"CDViewController"];
+        UIViewController * vc;
+        if ([dd.category isEqualToString:@"hotsoon_video"]) {
+            vc  = [self.storyboard instantiateViewControllerWithIdentifier:@"SmallVideoViewController"];
+        }else{
+            vc  = [self.storyboard instantiateViewControllerWithIdentifier:@"CDViewController"];
+        }
+        
         vc.title = dd.name;
         vc.tModel111 = dd;
         [self addChildViewController:vc];
