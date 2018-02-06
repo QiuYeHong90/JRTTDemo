@@ -18,5 +18,5 @@
 #import <AFNetworking.h>
 #import <PPNetworkHelper.h>
 #import <YYModel.h>
-
+#import <UIImageView+WebCache.h>
 #endif /* PrefixHeader_pch */

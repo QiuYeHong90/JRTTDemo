@@ -67,6 +67,9 @@
     
 }
 
+
+
+
 -(void)changeVC:(NSInteger)idx
 {
     CGFloat left = idx*SCREEN_WIDTH;

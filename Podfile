@@ -6,4 +6,5 @@ pod 'Masonry', '~> 1.1.0'
 pod 'AFNetworking', '~> 3.1.0'
 pod 'PPNetworkHelper', '~> 0.8.0'
 pod 'YYModel', '~> 1.0.4'
+pod 'SDWebImage', '~> 4.2.3'
 end 
