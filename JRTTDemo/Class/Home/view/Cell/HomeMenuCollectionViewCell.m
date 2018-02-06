@@ -7,7 +7,7 @@
 //
 
 
-
+#import "TitleModel.h"
 #import "HomeMenuCollectionViewCell.h"
 
 @implementation HomeMenuCollectionViewCell
@@ -19,8 +19,8 @@
 
 -(void)bindData:(id)data indexPath:(NSIndexPath *)indexPath
 {
-    NSString * title = data[indexPath.row];
-    self.title.text = title;
+    T1Data * title = data[indexPath.row];
+    self.title.text = title.name;
 }
 -(void)setSelected:(BOOL)selected
 {

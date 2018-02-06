@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface CDViewController : UIViewController
-
+@property (nonatomic,strong) T1Data * tModel111;
 @end

@@ -82,8 +82,8 @@
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSString * str = self.dataArray[indexPath.row];
-    CGFloat w = [str widthForFont:[UIFont systemFontOfSize:15]];
+    T1Data * str = self.dataArray[indexPath.row];
+    CGFloat w = [str.name widthForFont:[UIFont systemFontOfSize:15]];
     return CGSizeMake(w+10, 36);
 }
 - (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section

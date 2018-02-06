@@ -25,6 +25,8 @@
 		FEB59FBC202952960003676D /* TWTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FEB59FBB202952960003676D /* TWTableViewCell.m */; };
 		FEB59FC020295E5A0003676D /* ImgBottomOneTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FEB59FBE20295E5A0003676D /* ImgBottomOneTableViewCell.m */; };
 		FEB59FC120295E5A0003676D /* ImgBottomOneTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FEB59FBF20295E5A0003676D /* ImgBottomOneTableViewCell.xib */; };
+		FEB59FC5202980740003676D /* TitleModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FEB59FC4202980740003676D /* TitleModel.m */; };
+		FEB59FC8202988840003676D /* UIViewController+addA.m in Sources */ = {isa = PBXBuildFile; fileRef = FEB59FC7202988840003676D /* UIViewController+addA.m */; };
 		FEE204C1201AC8D900E25B61 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FEE204C0201AC8D900E25B61 /* AppDelegate.m */; };
 		FEE204C7201AC8D900E25B61 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEE204C5201AC8D900E25B61 /* Main.storyboard */; };
 		FEE204C9201AC8D900E25B61 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FEE204C8201AC8D900E25B61 /* Assets.xcassets */; };
@@ -89,6 +91,10 @@
 		FEB59FBD20295E5A0003676D /* ImgBottomOneTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImgBottomOneTableViewCell.h; sourceTree = "<group>"; };
 		FEB59FBE20295E5A0003676D /* ImgBottomOneTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImgBottomOneTableViewCell.m; sourceTree = "<group>"; };
 		FEB59FBF20295E5A0003676D /* ImgBottomOneTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImgBottomOneTableViewCell.xib; sourceTree = "<group>"; };
+		FEB59FC3202980740003676D /* TitleModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TitleModel.h; sourceTree = "<group>"; };
+		FEB59FC4202980740003676D /* TitleModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TitleModel.m; sourceTree = "<group>"; };
+		FEB59FC6202988840003676D /* UIViewController+addA.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+addA.h"; sourceTree = "<group>"; };
+		FEB59FC7202988840003676D /* UIViewController+addA.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+addA.m"; sourceTree = "<group>"; };
 		FEE204BC201AC8D900E25B61 /* JRTTDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JRTTDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEE204BF201AC8D900E25B61 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		FEE204C0201AC8D900E25B61 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -183,6 +189,7 @@
 		FE4D2033201F009100FBD21D /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				FEB59FC22029805E0003676D /* Model */,
 				FE20BD04201AE98200BA07C8 /* ChilderVC */,
 				FEE204F3201ACBD500E25B61 /* view */,
 				FE4D2030201F004000FBD21D /* HomeViewController.h */,
@@ -236,6 +243,8 @@
 				FEA3572F201EBA2C009BDA4E /* JRTTabBarItem.m */,
 				FEA6A00D20207B7F0079667F /* NSString+Date.h */,
 				FEA6A00E20207B7F0079667F /* NSString+Date.m */,
+				FEB59FC6202988840003676D /* UIViewController+addA.h */,
+				FEB59FC7202988840003676D /* UIViewController+addA.m */,
 			);
 			path = Tool;
 			sourceTree = "<group>";
@@ -245,6 +254,15 @@
 			children = (
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		FEB59FC22029805E0003676D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FEB59FC3202980740003676D /* TitleModel.h */,
+				FEB59FC4202980740003676D /* TitleModel.m */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		FEE204B3201AC8D900E25B61 = {
@@ -546,6 +564,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FEB59FC8202988840003676D /* UIViewController+addA.m in Sources */,
 				FE20BD07201AE9EB00BA07C8 /* CDViewController.m in Sources */,
 				FE20BD01201AD66B00BA07C8 /* HomeMenuCollectionViewCell.m in Sources */,
 				FEB59FB8202950AF0003676D /* ImgBottomTableViewCell.m in Sources */,
@@ -557,6 +576,7 @@
 				FE75C7EF20280D5B003C7D68 /* DataModel.m in Sources */,
 				FEB59FAF202936290003676D /* ImgLeftTableViewCell.m in Sources */,
 				FEA6A00F20207B7F0079667F /* NSString+Date.m in Sources */,
+				FEB59FC5202980740003676D /* TitleModel.m in Sources */,
 				FEA35730201EBA2C009BDA4E /* JRTTabBarItem.m in Sources */,
 				FEE204F6201ACC0800E25B61 /* HomeMenuView.m in Sources */,
 				FEB59FC020295E5A0003676D /* ImgBottomOneTableViewCell.m in Sources */,

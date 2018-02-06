@@ -38,7 +38,7 @@
 +(instancetype)getViewWithNibSelectedBlock:(didSelectedBlock)SelectedBlock
 {
     HomeMenuView * view = [self getViewWithNib];
-    [view.viewModel setCollectionView:view.collectionView datayArray:@[@"推荐"].mutableCopy cellIdentifer:@"HomeMenuCollectionViewCell" didSelectedBlock:SelectedBlock];
+    [view.viewModel setCollectionView:view.collectionView datayArray:@[].mutableCopy cellIdentifer:@"HomeMenuCollectionViewCell" didSelectedBlock:SelectedBlock];
     return view;
 }
 
