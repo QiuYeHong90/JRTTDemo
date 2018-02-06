@@ -57,7 +57,7 @@
         
         TitleModel * model = [TitleModel yy_modelWithDictionary:responseObject];
         T1Data * obj = [T1Data new];
-        obj.category = @"tuijian";
+        obj.category = @"";
         obj.name = @"推荐";
         obj.web_url = @"";
         obj.flags = 0;

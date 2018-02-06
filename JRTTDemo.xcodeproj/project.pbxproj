@@ -27,6 +27,8 @@
 		FEB59FC120295E5A0003676D /* ImgBottomOneTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FEB59FBF20295E5A0003676D /* ImgBottomOneTableViewCell.xib */; };
 		FEB59FC5202980740003676D /* TitleModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FEB59FC4202980740003676D /* TitleModel.m */; };
 		FEB59FC8202988840003676D /* UIViewController+addA.m in Sources */ = {isa = PBXBuildFile; fileRef = FEB59FC7202988840003676D /* UIViewController+addA.m */; };
+		FEB59FCA20298F3A0003676D /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = FEB59FC920298F3A0003676D /* README.md */; };
+		FEB59FCC20298F510003676D /* JRTT.gif in Resources */ = {isa = PBXBuildFile; fileRef = FEB59FCB20298F510003676D /* JRTT.gif */; };
 		FEE204C1201AC8D900E25B61 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FEE204C0201AC8D900E25B61 /* AppDelegate.m */; };
 		FEE204C7201AC8D900E25B61 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEE204C5201AC8D900E25B61 /* Main.storyboard */; };
 		FEE204C9201AC8D900E25B61 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FEE204C8201AC8D900E25B61 /* Assets.xcassets */; };
@@ -95,6 +97,8 @@
 		FEB59FC4202980740003676D /* TitleModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TitleModel.m; sourceTree = "<group>"; };
 		FEB59FC6202988840003676D /* UIViewController+addA.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+addA.h"; sourceTree = "<group>"; };
 		FEB59FC7202988840003676D /* UIViewController+addA.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+addA.m"; sourceTree = "<group>"; };
+		FEB59FC920298F3A0003676D /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		FEB59FCB20298F510003676D /* JRTT.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = JRTT.gif; sourceTree = "<group>"; };
 		FEE204BC201AC8D900E25B61 /* JRTTDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JRTTDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEE204BF201AC8D900E25B61 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		FEE204C0201AC8D900E25B61 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -268,6 +272,8 @@
 		FEE204B3201AC8D900E25B61 = {
 			isa = PBXGroup;
 			children = (
+				FEB59FC920298F3A0003676D /* README.md */,
+				FEB59FCB20298F510003676D /* JRTT.gif */,
 				FEE204BE201AC8D900E25B61 /* JRTTDemo */,
 				FEE204D7201AC8D900E25B61 /* JRTTDemoTests */,
 				FEE204E2201AC8D900E25B61 /* JRTTDemoUITests */,
@@ -487,7 +493,9 @@
 				FEB59FB0202936290003676D /* ImgLeftTableViewCell.xib in Resources */,
 				FEE204C9201AC8D900E25B61 /* Assets.xcassets in Resources */,
 				FEB59FC120295E5A0003676D /* ImgBottomOneTableViewCell.xib in Resources */,
+				FEB59FCA20298F3A0003676D /* README.md in Resources */,
 				FEE204F8201ACC1400E25B61 /* HomeMenuView.xib in Resources */,
+				FEB59FCC20298F510003676D /* JRTT.gif in Resources */,
 				FEE204C7201AC8D900E25B61 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
