@@ -5,6 +5,9 @@
 //  Created by 赵 on 2018/2/6.
 //  Copyright © 2018年 袁书辉. All rights reserved.
 //
+
+
+#import "SmalVideoCollectionViewCell.h"
 #import "PlaybackView.h"
 #import <AVFoundation/AVFoundation.h>
 #import "SmallVideoViewModel.h"
@@ -17,6 +20,20 @@
 @end
 
 @implementation SmallVideoViewController
+
+-(UIImageView *)curretnImageView
+{
+    if (!_curretnImageView) {
+        _curretnImageView = [UIImageView new];
+        
+        _curretnImageView.contentMode = UIViewContentModeScaleAspectFill;
+       UIWindow * window  = [UIApplication sharedApplication].keyWindow;
+        _curretnImageView.hidden = YES;
+        [window addSubview:_curretnImageView];
+    }
+    return _curretnImageView;
+}
+
 -(SmallVideoViewModel *)viewModel
 {
     if (!_viewModel) {
@@ -68,25 +85,38 @@
     [self.viewModel setCollectionView:self.collectionView datayArray:self.dataArray cellIdentifer:@"SmalVideoCollectionViewCell" didSelectedBlock:^(NSIndexPath *idxPath, NSMutableArray *dataArray) {
         
         
-        UICollectionViewCell * cell = [weakSelf.collectionView cellForItemAtIndexPath:idxPath];
+        [weakSelf showImgViewAnimationIndexPath:idxPath isOpen:YES];
         
-//        cell
-//        CGRect rectInTableView = [weakSelf.collectionView rect];
-        UIWindow * w = [UIApplication sharedApplication].keyWindow;
-        CGRect rect   = [weakSelf.collectionView convertRect:cell.frame toView:w];
-        
-        
-        [PlaybackView showData:weakSelf.dataArray fromIdx:idxPath.row];
-        
-//        NSLog(@"===%@",NSStringFromCGRect(rect));
-//        NSLog(@"===%@",NSStringFromCGRect(weakSelf.view.frame));
-//        
-////        CGRect rect = [tableView convertRect:rectInTableView toView:[tableView superview]];
-//        
-
         
     }];
 }
+
+-(void)showImgViewAnimationIndexPath:(NSIndexPath *)indexPath isOpen:(BOOL)isOpen
+{
+     SmalVideoCollectionViewCell * cell = (SmalVideoCollectionViewCell *)[self.collectionView cellForItemAtIndexPath:indexPath];
+    UIWindow * w = [UIApplication sharedApplication].keyWindow;
+    CGRect rect   = [self.collectionView convertRect:cell.frame toView:w];
+    self.curretnImageView.image = cell.bgImageView.image;
+    self.curretnImageView.frame = isOpen==YES? rect:w.bounds;
+    self.curretnImageView.hidden = NO;
+    __weak typeof(self) weakSelf = self;
+    [UIView animateWithDuration:0.5 animations:^{
+        self.curretnImageView.frame = isOpen==YES? w.bounds:rect;
+    } completion:^(BOOL finished) {
+        
+        if (isOpen) {
+            [PlaybackView showData:self.dataArray fromIdx:indexPath.row closeBlock:^(UIImage *img, NSIndexPath *indexPath) {
+                [weakSelf showImgViewAnimationIndexPath:indexPath isOpen:NO];
+            }] ;
+        }
+        
+        weakSelf.curretnImageView.hidden = YES;
+    }];
+
+    
+    
+}
+
 
 -(void)updateUI
 {

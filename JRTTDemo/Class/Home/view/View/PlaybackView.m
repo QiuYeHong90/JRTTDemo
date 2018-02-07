@@ -17,11 +17,12 @@
     // Drawing code
 }
 */
-+(void)showData:(NSMutableArray *)data fromIdx:(NSInteger)fromIdx
++(void)showData:(NSMutableArray *)data fromIdx:(NSInteger)fromIdx closeBlock:(void (^)(UIImage *img,NSIndexPath *indexPath))CallBlcok
 {
     UIWindow * kewindow = [UIApplication sharedApplication].keyWindow;
     
     PlaybackView * view = [[NSBundle mainBundle] loadNibNamed:NSStringFromClass([self class]) owner:self options:nil][0];
+    view.CallBlcok= CallBlcok;
     view.fromIdx = fromIdx;
     view.viewModel.fromIdx = fromIdx;
     [view loadUI];
@@ -70,7 +71,8 @@
 -(void)playIdxPath:(NSIndexPath *)idxPath dataArray:(NSMutableArray *)dataArray
 {
     
-    self.currentCell = self.viewModel.currentCell;
+    self.currentIndexPath = idxPath;
+    self.currentCell = (PlayBackCollectionViewCell *)self.viewModel.currentCell;
     Data * dict = dataArray[idxPath.row];
     
     NSArray * listVideo = dict.model[@"raw_data"][@"video"][@"play_addr"][@"url_list"];
@@ -103,6 +105,10 @@
     
     [[NSNotificationCenter defaultCenter] removeObserver:self];
     [self removeFromSuperview];
+    
+    if (self.CallBlcok) {
+        self.CallBlcok(self.currentCell.image.image, self.currentIndexPath);
+    }
 
 }
 

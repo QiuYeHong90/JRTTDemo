@@ -12,4 +12,6 @@
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 @property (weak, nonatomic) IBOutlet UICollectionViewFlowLayout *flowLayout;
 
+@property (nonatomic,strong) UIImageView * curretnImageView;
+
 @end
