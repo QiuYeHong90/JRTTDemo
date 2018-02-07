@@ -1,16 +1,14 @@
 //
-//  SmalVideoCollectionViewCell.m
+//  PlayBackCollectionViewCell.m
 //  JRTTDemo
 //
-//  Created by 赵 on 2018/2/6.
+//  Created by 赵 on 2018/2/7.
 //  Copyright © 2018年 袁书辉. All rights reserved.
 //
-
-
 #import "DataModel.h"
-#import "SmalVideoCollectionViewCell.h"
+#import "PlayBackCollectionViewCell.h"
 
-@implementation SmalVideoCollectionViewCell
+@implementation PlayBackCollectionViewCell
 
 - (void)awakeFromNib {
     [super awakeFromNib];
@@ -34,16 +32,11 @@
     NSArray * large_image_list = dict.model[@"raw_data"][@"large_image_list"];
     NSString * url = @"";
     if (large_image_list) {
-         url = large_image_list[0][@"url"];
-         url = [self imgUrl:url];
+        url = large_image_list[0][@"url"];
+        url = [self imgUrl:url];
     }
     
-    [self.bgImageView sd_setImageWithURL:[NSURL URLWithString:url] placeholderImage:nil];
-    [self.headerImageView sd_setImageWithURL:[NSURL URLWithString:avatar_url] placeholderImage:nil];
-    
-    self.contentLab.text = title;
-    self.nameLab.text = name;
-    self.zanLab.text = [NSString stringWithFormat:@"%ld赞",digg_count];
+    [self.image sd_setImageWithURL:[NSURL URLWithString:url] placeholderImage:nil];
     
 }
 

@@ -5,7 +5,7 @@
 //  Created by 赵 on 2018/2/6.
 //  Copyright © 2018年 袁书辉. All rights reserved.
 //
-
+#import "PlaybackView.h"
 #import <AVFoundation/AVFoundation.h>
 #import "SmallVideoViewModel.h"
 #import "SmallVideoViewController.h"
@@ -64,21 +64,26 @@
     self.flowLayout.itemSize = CGSizeMake(itemW, itemH);
     
     
-    
+    __weak typeof(self) weakSelf = self;
     [self.viewModel setCollectionView:self.collectionView datayArray:self.dataArray cellIdentifer:@"SmalVideoCollectionViewCell" didSelectedBlock:^(NSIndexPath *idxPath, NSMutableArray *dataArray) {
-        Data * dict = dataArray[idxPath.row];
         
-        NSArray * listVideo = dict.model[@"raw_data"][@"video"][@"play_addr"][@"url_list"];
-        if (listVideo) {
-            if (listVideo.count>0) {
-                NSLog(@"listVideo====%@",listVideo[0]);
-                self.urlVideo = listVideo[0];
-                
-                [self.player play];
-            }
-            
-            
-        }
+        
+        UICollectionViewCell * cell = [weakSelf.collectionView cellForItemAtIndexPath:idxPath];
+        
+//        cell
+//        CGRect rectInTableView = [weakSelf.collectionView rect];
+        UIWindow * w = [UIApplication sharedApplication].keyWindow;
+        CGRect rect   = [weakSelf.collectionView convertRect:cell.frame toView:w];
+        
+        
+        [PlaybackView showData:weakSelf.dataArray fromIdx:idxPath.row];
+        
+//        NSLog(@"===%@",NSStringFromCGRect(rect));
+//        NSLog(@"===%@",NSStringFromCGRect(weakSelf.view.frame));
+//        
+////        CGRect rect = [tableView convertRect:rectInTableView toView:[tableView superview]];
+//        
+
         
     }];
 }

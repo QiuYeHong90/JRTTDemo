@@ -37,6 +37,11 @@
 		FEB59FE22029A23B0003676D /* BaseCollectionViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FEB59FE12029A23B0003676D /* BaseCollectionViewModel.m */; };
 		FEB59FE42029B8330003676D /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEB59FE32029B8330003676D /* AVKit.framework */; };
 		FEB59FE62029B8480003676D /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEB59FE52029B8480003676D /* AVFoundation.framework */; };
+		FED70A28202A906C005D567A /* PlaybackView.m in Sources */ = {isa = PBXBuildFile; fileRef = FED70A27202A906C005D567A /* PlaybackView.m */; };
+		FED70A2A202A907C005D567A /* PlaybackView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FED70A29202A907C005D567A /* PlaybackView.xib */; };
+		FED70A2F202A97A3005D567A /* PlayBackCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FED70A2D202A97A3005D567A /* PlayBackCollectionViewCell.m */; };
+		FED70A30202A97A3005D567A /* PlayBackCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FED70A2E202A97A3005D567A /* PlayBackCollectionViewCell.xib */; };
+		FED70A34202A99BF005D567A /* PlayBackViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FED70A33202A99BF005D567A /* PlayBackViewModel.m */; };
 		FEE204C1201AC8D900E25B61 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FEE204C0201AC8D900E25B61 /* AppDelegate.m */; };
 		FEE204C7201AC8D900E25B61 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEE204C5201AC8D900E25B61 /* Main.storyboard */; };
 		FEE204C9201AC8D900E25B61 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FEE204C8201AC8D900E25B61 /* Assets.xcassets */; };
@@ -120,6 +125,14 @@
 		FEB59FE12029A23B0003676D /* BaseCollectionViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseCollectionViewModel.m; sourceTree = "<group>"; };
 		FEB59FE32029B8330003676D /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
 		FEB59FE52029B8480003676D /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		FED70A26202A906C005D567A /* PlaybackView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlaybackView.h; sourceTree = "<group>"; };
+		FED70A27202A906C005D567A /* PlaybackView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlaybackView.m; sourceTree = "<group>"; };
+		FED70A29202A907C005D567A /* PlaybackView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlaybackView.xib; sourceTree = "<group>"; };
+		FED70A2C202A97A3005D567A /* PlayBackCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlayBackCollectionViewCell.h; sourceTree = "<group>"; };
+		FED70A2D202A97A3005D567A /* PlayBackCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlayBackCollectionViewCell.m; sourceTree = "<group>"; };
+		FED70A2E202A97A3005D567A /* PlayBackCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlayBackCollectionViewCell.xib; sourceTree = "<group>"; };
+		FED70A32202A99BF005D567A /* PlayBackViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlayBackViewModel.h; sourceTree = "<group>"; };
+		FED70A33202A99BF005D567A /* PlayBackViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlayBackViewModel.m; sourceTree = "<group>"; };
 		FEE204BC201AC8D900E25B61 /* JRTTDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JRTTDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEE204BF201AC8D900E25B61 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		FEE204C0201AC8D900E25B61 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -346,6 +359,37 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		FED70A25202A9015005D567A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FED70A31202A99A8005D567A /* ViewModel */,
+				FED70A2B202A9787005D567A /* cell */,
+				FED70A26202A906C005D567A /* PlaybackView.h */,
+				FED70A27202A906C005D567A /* PlaybackView.m */,
+				FED70A29202A907C005D567A /* PlaybackView.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FED70A2B202A9787005D567A /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				FED70A2C202A97A3005D567A /* PlayBackCollectionViewCell.h */,
+				FED70A2D202A97A3005D567A /* PlayBackCollectionViewCell.m */,
+				FED70A2E202A97A3005D567A /* PlayBackCollectionViewCell.xib */,
+			);
+			path = cell;
+			sourceTree = "<group>";
+		};
+		FED70A31202A99A8005D567A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				FED70A32202A99BF005D567A /* PlayBackViewModel.h */,
+				FED70A33202A99BF005D567A /* PlayBackViewModel.m */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		FEE204B3201AC8D900E25B61 = {
 			isa = PBXGroup;
 			children = (
@@ -416,6 +460,7 @@
 		FEE204F3201ACBD500E25B61 /* view */ = {
 			isa = PBXGroup;
 			children = (
+				FED70A25202A9015005D567A /* View */,
 				FEE204FC201AD00F00E25B61 /* Cell */,
 				FEE204FB201AD00800E25B61 /* ViewModel */,
 				FEE204F4201ACC0800E25B61 /* HomeMenuView.h */,
@@ -566,8 +611,10 @@
 				FE20BD02201AD66B00BA07C8 /* HomeMenuCollectionViewCell.xib in Resources */,
 				FEE204CC201AC8D900E25B61 /* LaunchScreen.storyboard in Resources */,
 				FEB59FB9202950AF0003676D /* ImgBottomTableViewCell.xib in Resources */,
+				FED70A2A202A907C005D567A /* PlaybackView.xib in Resources */,
 				FEB59FDA20299ED10003676D /* SmalVideoCollectionViewCell.xib in Resources */,
 				FEB59FB0202936290003676D /* ImgLeftTableViewCell.xib in Resources */,
+				FED70A30202A97A3005D567A /* PlayBackCollectionViewCell.xib in Resources */,
 				FEE204C9201AC8D900E25B61 /* Assets.xcassets in Resources */,
 				FEB59FC120295E5A0003676D /* ImgBottomOneTableViewCell.xib in Resources */,
 				FEB59FCA20298F3A0003676D /* README.md in Resources */,
@@ -652,6 +699,7 @@
 				FEB59FC8202988840003676D /* UIViewController+addA.m in Sources */,
 				FE20BD07201AE9EB00BA07C8 /* CDViewController.m in Sources */,
 				FE20BD01201AD66B00BA07C8 /* HomeMenuCollectionViewCell.m in Sources */,
+				FED70A28202A906C005D567A /* PlaybackView.m in Sources */,
 				FEB59FD920299ED10003676D /* SmalVideoCollectionViewCell.m in Sources */,
 				FEB59FDD2029A1E00003676D /* SmallVideoViewModel.m in Sources */,
 				FEB59FB8202950AF0003676D /* ImgBottomTableViewCell.m in Sources */,
@@ -661,12 +709,14 @@
 				FE20BCFD201AD2A300BA07C8 /* CollectionViewModel.m in Sources */,
 				FEE204CF201AC8D900E25B61 /* main.m in Sources */,
 				FE4D2032201F004000FBD21D /* HomeViewController.m in Sources */,
+				FED70A34202A99BF005D567A /* PlayBackViewModel.m in Sources */,
 				FEB59FD320299BAB0003676D /* BaseChirldViewController.m in Sources */,
 				FE75C7EF20280D5B003C7D68 /* DataModel.m in Sources */,
 				FEB59FD020299B880003676D /* SmallVideoViewController.m in Sources */,
 				FEB59FAF202936290003676D /* ImgLeftTableViewCell.m in Sources */,
 				FEA6A00F20207B7F0079667F /* NSString+Date.m in Sources */,
 				FEB59FC5202980740003676D /* TitleModel.m in Sources */,
+				FED70A2F202A97A3005D567A /* PlayBackCollectionViewCell.m in Sources */,
 				FEA35730201EBA2C009BDA4E /* JRTTabBarItem.m in Sources */,
 				FEE204F6201ACC0800E25B61 /* HomeMenuView.m in Sources */,
 				FEB59FC020295E5A0003676D /* ImgBottomOneTableViewCell.m in Sources */,

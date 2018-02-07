@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="PlaybackView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="648"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="QDO-MT-Hqb">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="648"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="UU4-g1-A9h">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CaQ-SQ-REj">
+                    <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GgK-lT-VMA">
+                            <rect key="frame" x="8" y="10" width="24" height="24"/>
+                            <state key="normal" image="guide_amount_close_big"/>
+                            <connections>
+                                <action selector="close:" destination="iN0-l3-epB" eventType="touchUpInside" id="nus-1l-N2A"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QE1-b4-wyh">
+                            <rect key="frame" x="132" y="12" width="111" height="21"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="111" id="sAu-L1-qrk"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="GgK-lT-VMA" firstAttribute="leading" secondItem="CaQ-SQ-REj" secondAttribute="leading" constant="8" id="0oF-37-B5d"/>
+                        <constraint firstAttribute="height" constant="44" id="2Xw-CG-ImY"/>
+                        <constraint firstItem="GgK-lT-VMA" firstAttribute="centerY" secondItem="CaQ-SQ-REj" secondAttribute="centerY" id="8gd-58-9np"/>
+                        <constraint firstItem="QE1-b4-wyh" firstAttribute="centerY" secondItem="CaQ-SQ-REj" secondAttribute="centerY" id="NUl-ZY-TSl"/>
+                        <constraint firstItem="QE1-b4-wyh" firstAttribute="centerX" secondItem="CaQ-SQ-REj" secondAttribute="centerX" id="XMH-b1-ypI"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="QDO-MT-Hqb" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="BpL-UY-FbO"/>
+                <constraint firstItem="CaQ-SQ-REj" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="F1U-j8-paM"/>
+                <constraint firstItem="QDO-MT-Hqb" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="F2Z-ZK-Bkg"/>
+                <constraint firstItem="CaQ-SQ-REj" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="NBO-Eq-PIE"/>
+                <constraint firstItem="CaQ-SQ-REj" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="euf-PX-u2i"/>
+                <constraint firstItem="QDO-MT-Hqb" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="vT7-fq-cym"/>
+                <constraint firstAttribute="bottom" secondItem="QDO-MT-Hqb" secondAttribute="bottom" id="vuK-bi-Kxp"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="collectionView" destination="QDO-MT-Hqb" id="4ul-sP-761"/>
+                <outlet property="flowLayout" destination="UU4-g1-A9h" id="nWx-up-tFq"/>
+            </connections>
+            <point key="canvasLocation" x="-25.5" y="-140"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="guide_amount_close_big" width="24" height="24"/>
+    </resources>
+</document>
