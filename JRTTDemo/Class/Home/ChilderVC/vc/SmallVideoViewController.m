@@ -93,7 +93,23 @@
 
 -(void)showImgViewAnimationIndexPath:(NSIndexPath *)indexPath isOpen:(BOOL)isOpen
 {
+    
      SmalVideoCollectionViewCell * cell = (SmalVideoCollectionViewCell *)[self.collectionView cellForItemAtIndexPath:indexPath];
+    if (isOpen==NO) {
+        BOOL flag = NO;
+        for (SmalVideoCollectionViewCell * cell1 in self.collectionView.visibleCells) {
+            if ([cell1 isEqual:cell]) {
+                flag = YES;
+            }
+        }
+        if (flag==NO) {
+             [self.collectionView scrollToItemAtIndexPath:indexPath atScrollPosition:UICollectionViewScrollPositionCenteredVertically animated:NO];
+        }
+       
+    }
+    
+    
+    cell = (SmalVideoCollectionViewCell *)[self.collectionView cellForItemAtIndexPath:indexPath];
     UIWindow * w = [UIApplication sharedApplication].keyWindow;
     CGRect rect   = [self.collectionView convertRect:cell.frame toView:w];
     self.curretnImageView.image = cell.bgImageView.image;
