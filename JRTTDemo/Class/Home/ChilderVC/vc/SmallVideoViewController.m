@@ -113,7 +113,7 @@
                 if (isClose) {
                     [weakSelf showImgViewAnimationIndexPath:indexPath isOpen:NO];
                 }else{
-                    [weakSelf.collectionView scrollToItemAtIndexPath:indexPath atScrollPosition:UICollectionViewScrollPositionCenteredVertically animated:NO];
+                    [weakSelf.collectionView scrollToItemAtIndexPath:indexPath atScrollPosition:UICollectionViewScrollPositionCenteredVertically animated:YES];
                 }
                 
             }] ;
@@ -126,10 +126,16 @@
     
 }
 
-
+-(UIScrollView * )getScrollViewAddRefreshAndFooter
+{
+    return self.collectionView;
+}
 -(void)updateUI
 {
     [self.viewModel updateData:self.dataArray];
+    
+    [PlaybackView updateData:self.dataArray];
+    
 }
 
 - (void)didReceiveMemoryWarning {

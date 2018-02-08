@@ -29,7 +29,7 @@
 @property (nonatomic,strong) NSIndexPath * currentIndexPath;
 @property (nonatomic,copy) NSString * urlVideo;
 +(void)showData:(NSMutableArray *)data fromIdx:(NSInteger)fromIdx closeBlock:(void (^)(BOOL isClose,NSIndexPath *indexPath))CallBlcok;
-
++(void)updateData:(NSMutableArray *)data;
 
 
 @end

@@ -28,7 +28,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 }
-
+-(UIScrollView * )getScrollViewAddRefreshAndFooter
+{
+    return self.tableView;
+}
 -(void)updateUI
 {
     [self.tableView reloadData];

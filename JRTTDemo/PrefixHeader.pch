@@ -19,6 +19,7 @@
 #import <PPNetworkHelper.h>
 #import <YYModel.h>
 #import <UIImageView+WebCache.h>
+#import <MJRefresh.h>
 
 #import "UIViewController+addA.h"
 #endif /* PrefixHeader_pch */

@@ -33,9 +33,11 @@
     view.CallBlcok= CallBlcok;
     view.fromIdx = fromIdx;
     view.viewModel.fromIdx = fromIdx;
+    
+    view.tag = 1997;
     [view loadUI];
     [view updateData:data];
-    
+   
     
     view.frame = kewindow.bounds;
     [kewindow addSubview:view];
@@ -45,6 +47,9 @@
 //    [view playIdxPath:newIndexPath dataArray:data];
     
 }
+
+
+
 -(PlayBackViewModel *)viewModel
 {
     if (!_viewModel) {
@@ -54,6 +59,7 @@
 }
 -(void)awakeFromNib
 {
+    
     [super awakeFromNib];
     
 }
@@ -99,6 +105,16 @@
     }
 }
 
+
++(void)updateData:(NSMutableArray *)data
+{
+    
+    PlaybackView * view = (PlaybackView *)[[UIApplication sharedApplication].keyWindow viewWithTag:1997];
+    if (view) {
+         [view updateData:data];
+    }
+   
+}
 
 -(void)updateData:(NSMutableArray *)data
 {
