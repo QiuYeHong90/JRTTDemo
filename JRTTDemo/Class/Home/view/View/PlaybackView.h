@@ -25,10 +25,10 @@
 @property (nonatomic,weak) PlayBackCollectionViewCell * currentCell;
 
 
-@property (nonatomic,copy) void (^CallBlcok)(UIImage *img,NSIndexPath *indexPath);
+@property (nonatomic,copy) void (^CallBlcok)(BOOL isClose,NSIndexPath *indexPath);
 @property (nonatomic,strong) NSIndexPath * currentIndexPath;
 @property (nonatomic,copy) NSString * urlVideo;
-+(void)showData:(NSMutableArray *)data fromIdx:(NSInteger)fromIdx closeBlock:(void (^)(UIImage *img,NSIndexPath *indexPath))CallBlcok;
++(void)showData:(NSMutableArray *)data fromIdx:(NSInteger)fromIdx closeBlock:(void (^)(BOOL isClose,NSIndexPath *indexPath))CallBlcok;
 
 
 

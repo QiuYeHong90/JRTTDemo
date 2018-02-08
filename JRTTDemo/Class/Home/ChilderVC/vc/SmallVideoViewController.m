@@ -95,19 +95,7 @@
 {
     
      SmalVideoCollectionViewCell * cell = (SmalVideoCollectionViewCell *)[self.collectionView cellForItemAtIndexPath:indexPath];
-    if (isOpen==NO) {
-        BOOL flag = NO;
-        for (SmalVideoCollectionViewCell * cell1 in self.collectionView.visibleCells) {
-            if ([cell1 isEqual:cell]) {
-                flag = YES;
-            }
-        }
-        if (flag==NO) {
-             [self.collectionView scrollToItemAtIndexPath:indexPath atScrollPosition:UICollectionViewScrollPositionCenteredVertically animated:NO];
-        }
-       
-    }
-    
+        
     
     cell = (SmalVideoCollectionViewCell *)[self.collectionView cellForItemAtIndexPath:indexPath];
     UIWindow * w = [UIApplication sharedApplication].keyWindow;
@@ -121,8 +109,13 @@
     } completion:^(BOOL finished) {
         
         if (isOpen) {
-            [PlaybackView showData:self.dataArray fromIdx:indexPath.row closeBlock:^(UIImage *img, NSIndexPath *indexPath) {
-                [weakSelf showImgViewAnimationIndexPath:indexPath isOpen:NO];
+            [PlaybackView showData:self.dataArray fromIdx:indexPath.row closeBlock:^(BOOL isClose, NSIndexPath *indexPath) {
+                if (isClose) {
+                    [weakSelf showImgViewAnimationIndexPath:indexPath isOpen:NO];
+                }else{
+                    [weakSelf.collectionView scrollToItemAtIndexPath:indexPath atScrollPosition:UICollectionViewScrollPositionCenteredVertically animated:NO];
+                }
+                
             }] ;
         }
         

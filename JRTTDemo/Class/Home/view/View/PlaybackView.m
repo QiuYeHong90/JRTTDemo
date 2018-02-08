@@ -8,6 +8,14 @@
 #import "DataModel.h"
 #import "PlaybackView.h"
 
+@interface PlaybackView()
+
+
+
+
+@end
+
+
 @implementation PlaybackView
 
 /*
@@ -17,7 +25,7 @@
     // Drawing code
 }
 */
-+(void)showData:(NSMutableArray *)data fromIdx:(NSInteger)fromIdx closeBlock:(void (^)(UIImage *img,NSIndexPath *indexPath))CallBlcok
++(void)showData:(NSMutableArray *)data fromIdx:(NSInteger)fromIdx closeBlock:(void (^)(BOOL isClose,NSIndexPath *indexPath))CallBlcok
 {
     UIWindow * kewindow = [UIApplication sharedApplication].keyWindow;
     
@@ -60,7 +68,7 @@
     self.collectionView.pagingEnabled = YES;
     __weak typeof(self) weakSelf = self;
     [self.viewModel setCollectionView:self.collectionView datayArray:@[].mutableCopy cellIdentifer:@"PlayBackCollectionViewCell" didSelectedBlock:^(NSIndexPath *idxPath, NSMutableArray *dataArray) {
-        
+        weakSelf.CallBlcok(NO, idxPath);
         [weakSelf playIdxPath:idxPath dataArray:dataArray];
     }];
     
@@ -106,8 +114,9 @@
     [[NSNotificationCenter defaultCenter] removeObserver:self];
     [self removeFromSuperview];
     
+    
     if (self.CallBlcok) {
-        self.CallBlcok(self.currentCell.image.image, self.currentIndexPath);
+        self.CallBlcok(YES, self.currentIndexPath);
     }
 
 }
