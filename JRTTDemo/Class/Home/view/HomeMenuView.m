@@ -30,7 +30,7 @@
 -(void)awakeFromNib
 {
     [super awakeFromNib];
-    self.flowLayout.minimumInteritemSpacing = 1;
+    self.flowLayout.minimumInteritemSpacing = 0.0001;
     
     
 }

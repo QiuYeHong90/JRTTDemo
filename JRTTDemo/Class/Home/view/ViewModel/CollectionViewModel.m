@@ -28,7 +28,11 @@
     return cell;
 }
 
-
+-(void)updateData:(NSMutableArray *)dataArray
+{
+    [self.dataArray setArray: dataArray];
+    [self.collectionView reloadData];
+}
 
 
 -(void)clickIdx:(NSInteger)idx
@@ -51,9 +55,9 @@
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    T1Data * str = self.dataArray[indexPath.row];
-    CGFloat w = [str.name widthForFont:[UIFont systemFontOfSize:15]];
-    return CGSizeMake(w+10, 36);
+//    T1Data * str = self.dataArray[indexPath.row];
+//    CGFloat w = [str.name widthForFont:[UIFont systemFontOfSize:15]];
+    return CGSizeMake(10, 30);
 }
 - (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section
 {

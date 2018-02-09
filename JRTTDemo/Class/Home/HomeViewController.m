@@ -69,7 +69,15 @@
         NSMutableArray * tempArr = [model.data.data mutableCopy];
         [tempArr insertObject:obj atIndex:0];
         [self.titleArray setArray:tempArr];
-        [self updateVC];
+        
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            // 通知主线程刷新 神马的
+            [self updateVC];
+        });
+        
+        
+        
         
         
     } failure:^(NSError *error) {

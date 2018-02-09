@@ -917,8 +917,9 @@
 				DEVELOPMENT_TEAM = G6K2R77NE3;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/JRTTDemo/PrefixHeader.pch";
 				INFOPLIST_FILE = JRTTDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.qiurong.JRTTDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.qiurong.qiuqiuShop1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -933,8 +934,9 @@
 				DEVELOPMENT_TEAM = G6K2R77NE3;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/JRTTDemo/PrefixHeader.pch";
 				INFOPLIST_FILE = JRTTDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.qiurong.JRTTDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.qiurong.qiuqiuShop1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -46,16 +45,15 @@
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstItem="a2R-4S-XtR" firstAttribute="trailing" secondItem="CJh-UB-sam" secondAttribute="trailing" id="0aC-ve-RVx"/>
-                <constraint firstItem="CJh-UB-sam" firstAttribute="trailing" secondItem="bKd-Ri-8AO" secondAttribute="trailing" id="7it-uC-9HU"/>
-                <constraint firstItem="a2R-4S-XtR" firstAttribute="top" secondItem="CJh-UB-sam" secondAttribute="top" id="BH7-P0-BZZ"/>
-                <constraint firstItem="bKd-Ri-8AO" firstAttribute="top" secondItem="CJh-UB-sam" secondAttribute="top" id="M7u-2V-svF"/>
-                <constraint firstItem="a2R-4S-XtR" firstAttribute="leading" secondItem="CJh-UB-sam" secondAttribute="leading" id="NLV-N8-dDh"/>
-                <constraint firstItem="a2R-4S-XtR" firstAttribute="bottom" secondItem="CJh-UB-sam" secondAttribute="bottom" id="hmK-Ck-EW4"/>
-                <constraint firstItem="bKd-Ri-8AO" firstAttribute="bottom" secondItem="CJh-UB-sam" secondAttribute="bottom" id="pFk-67-Xc7"/>
+                <constraint firstItem="a2R-4S-XtR" firstAttribute="trailing" secondItem="oJD-Y5-zfh" secondAttribute="trailing" id="0aC-ve-RVx"/>
+                <constraint firstAttribute="trailing" secondItem="bKd-Ri-8AO" secondAttribute="trailing" id="7it-uC-9HU"/>
+                <constraint firstItem="a2R-4S-XtR" firstAttribute="top" secondItem="oJD-Y5-zfh" secondAttribute="top" id="BH7-P0-BZZ"/>
+                <constraint firstItem="bKd-Ri-8AO" firstAttribute="top" secondItem="oJD-Y5-zfh" secondAttribute="top" id="M7u-2V-svF"/>
+                <constraint firstItem="a2R-4S-XtR" firstAttribute="leading" secondItem="oJD-Y5-zfh" secondAttribute="leading" id="NLV-N8-dDh"/>
+                <constraint firstItem="a2R-4S-XtR" firstAttribute="bottom" secondItem="oJD-Y5-zfh" secondAttribute="bottom" id="hmK-Ck-EW4"/>
+                <constraint firstItem="bKd-Ri-8AO" firstAttribute="bottom" secondItem="oJD-Y5-zfh" secondAttribute="bottom" id="pFk-67-Xc7"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <viewLayoutGuide key="safeArea" id="CJh-UB-sam"/>
             <connections>
                 <outlet property="collectionView" destination="a2R-4S-XtR" id="Gmm-Bi-VyR"/>
                 <outlet property="flowLayout" destination="zTu-8u-t7I" id="xCr-1a-rmI"/>
