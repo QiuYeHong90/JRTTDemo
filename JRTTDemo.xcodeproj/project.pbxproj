@@ -37,6 +37,9 @@
 		FEB59FE22029A23B0003676D /* BaseCollectionViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FEB59FE12029A23B0003676D /* BaseCollectionViewModel.m */; };
 		FEB59FE42029B8330003676D /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEB59FE32029B8330003676D /* AVKit.framework */; };
 		FEB59FE62029B8480003676D /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEB59FE52029B8480003676D /* AVFoundation.framework */; };
+		FED45C47202D28CB004670B1 /* ZhiBoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FED45C45202D28CB004670B1 /* ZhiBoTableViewCell.m */; };
+		FED45C48202D28CB004670B1 /* ZhiBoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FED45C46202D28CB004670B1 /* ZhiBoTableViewCell.xib */; };
+		FED45C4C202D8EDC004670B1 /* DetailZBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FED45C4B202D8EDC004670B1 /* DetailZBViewController.m */; };
 		FED70A28202A906C005D567A /* PlaybackView.m in Sources */ = {isa = PBXBuildFile; fileRef = FED70A27202A906C005D567A /* PlaybackView.m */; };
 		FED70A2A202A907C005D567A /* PlaybackView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FED70A29202A907C005D567A /* PlaybackView.xib */; };
 		FED70A2F202A97A3005D567A /* PlayBackCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FED70A2D202A97A3005D567A /* PlayBackCollectionViewCell.m */; };
@@ -125,6 +128,11 @@
 		FEB59FE12029A23B0003676D /* BaseCollectionViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseCollectionViewModel.m; sourceTree = "<group>"; };
 		FEB59FE32029B8330003676D /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
 		FEB59FE52029B8480003676D /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		FED45C44202D28CB004670B1 /* ZhiBoTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZhiBoTableViewCell.h; sourceTree = "<group>"; };
+		FED45C45202D28CB004670B1 /* ZhiBoTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZhiBoTableViewCell.m; sourceTree = "<group>"; };
+		FED45C46202D28CB004670B1 /* ZhiBoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZhiBoTableViewCell.xib; sourceTree = "<group>"; };
+		FED45C4A202D8EDC004670B1 /* DetailZBViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailZBViewController.h; sourceTree = "<group>"; };
+		FED45C4B202D8EDC004670B1 /* DetailZBViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailZBViewController.m; sourceTree = "<group>"; };
 		FED70A26202A906C005D567A /* PlaybackView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlaybackView.h; sourceTree = "<group>"; };
 		FED70A27202A906C005D567A /* PlaybackView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlaybackView.m; sourceTree = "<group>"; };
 		FED70A29202A907C005D567A /* PlaybackView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlaybackView.xib; sourceTree = "<group>"; };
@@ -222,6 +230,7 @@
 		FE4D202F201F002400FBD21D /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				FED45C49202D8EB4004670B1 /* DetailVC */,
 				FEB59FDE2029A2200003676D /* Base */,
 				FE4D2033201F009100FBD21D /* Home */,
 			);
@@ -327,6 +336,9 @@
 				FEB59FBD20295E5A0003676D /* ImgBottomOneTableViewCell.h */,
 				FEB59FBE20295E5A0003676D /* ImgBottomOneTableViewCell.m */,
 				FEB59FBF20295E5A0003676D /* ImgBottomOneTableViewCell.xib */,
+				FED45C44202D28CB004670B1 /* ZhiBoTableViewCell.h */,
+				FED45C45202D28CB004670B1 /* ZhiBoTableViewCell.m */,
+				FED45C46202D28CB004670B1 /* ZhiBoTableViewCell.xib */,
 			);
 			path = tableCell;
 			sourceTree = "<group>";
@@ -357,6 +369,15 @@
 				FEB59FE12029A23B0003676D /* BaseCollectionViewModel.m */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		FED45C49202D8EB4004670B1 /* DetailVC */ = {
+			isa = PBXGroup;
+			children = (
+				FED45C4A202D8EDC004670B1 /* DetailZBViewController.h */,
+				FED45C4B202D8EDC004670B1 /* DetailZBViewController.m */,
+			);
+			path = DetailVC;
 			sourceTree = "<group>";
 		};
 		FED70A25202A9015005D567A /* View */ = {
@@ -618,6 +639,7 @@
 				FEE204C9201AC8D900E25B61 /* Assets.xcassets in Resources */,
 				FEB59FC120295E5A0003676D /* ImgBottomOneTableViewCell.xib in Resources */,
 				FEB59FCA20298F3A0003676D /* README.md in Resources */,
+				FED45C48202D28CB004670B1 /* ZhiBoTableViewCell.xib in Resources */,
 				FEE204F8201ACC1400E25B61 /* HomeMenuView.xib in Resources */,
 				FEB59FCC20298F510003676D /* JRTT.gif in Resources */,
 				FEE204C7201AC8D900E25B61 /* Main.storyboard in Resources */,
@@ -682,6 +704,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-JRTTDemo/Pods-JRTTDemo-resources.sh",
 				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
+				"${PODS_ROOT}/ZFPlayer/ZFPlayer/ZFPlayer.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
@@ -708,6 +731,7 @@
 				FEB59FB8202950AF0003676D /* ImgBottomTableViewCell.m in Sources */,
 				FEB59FBC202952960003676D /* TWTableViewCell.m in Sources */,
 				FEB59FE22029A23B0003676D /* BaseCollectionViewModel.m in Sources */,
+				FED45C4C202D8EDC004670B1 /* DetailZBViewController.m in Sources */,
 				FE75C7F82028457E003C7D68 /* HttpHelper.m in Sources */,
 				FE20BCFD201AD2A300BA07C8 /* CollectionViewModel.m in Sources */,
 				FEE204CF201AC8D900E25B61 /* main.m in Sources */,
@@ -725,6 +749,7 @@
 				FEB59FC020295E5A0003676D /* ImgBottomOneTableViewCell.m in Sources */,
 				FEE204C1201AC8D900E25B61 /* AppDelegate.m in Sources */,
 				FE75C7EC202809CB003C7D68 /* ContentModel.m in Sources */,
+				FED45C47202D28CB004670B1 /* ZhiBoTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

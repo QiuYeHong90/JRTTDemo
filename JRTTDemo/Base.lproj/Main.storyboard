@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -102,7 +103,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gpj-NW-WwS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="161" y="-641"/>
+            <point key="canvasLocation" x="-161" y="-649"/>
         </scene>
         <!--文图-->
         <scene sceneID="Mdk-Sc-BkE">
@@ -136,7 +137,50 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZKW-0b-lnL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2861.5999999999999" y="-1639.4302848575715"/>
+            <point key="canvasLocation" x="2804" y="-1639"/>
+        </scene>
+        <!--DetailZB View Controller-->
+        <scene sceneID="c1E-wd-hgb">
+            <objects>
+                <viewController storyboardIdentifier="DetailZBViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BAg-RV-Uvg" customClass="DetailZBViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="d3J-Hy-MN2">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="45K-vm-JPs">
+                                <rect key="frame" x="0.0" y="20" width="375" height="210.5"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="my1-eP-mKz" customClass="ZFPlayerView">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="210.5"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="my1-eP-mKz" secondAttribute="trailing" id="7LU-gC-uB6"/>
+                                    <constraint firstItem="my1-eP-mKz" firstAttribute="leading" secondItem="45K-vm-JPs" secondAttribute="leading" id="a7T-BJ-Tsc"/>
+                                    <constraint firstAttribute="bottom" secondItem="my1-eP-mKz" secondAttribute="bottom" id="bAm-VG-K7l"/>
+                                    <constraint firstItem="my1-eP-mKz" firstAttribute="top" secondItem="45K-vm-JPs" secondAttribute="top" id="eGI-PX-2gi"/>
+                                    <constraint firstAttribute="width" secondItem="45K-vm-JPs" secondAttribute="height" multiplier="1139:640" id="vdN-Ih-ONE"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="45K-vm-JPs" firstAttribute="leading" secondItem="L3h-8S-tbl" secondAttribute="leading" id="5DZ-F1-Kh0"/>
+                            <constraint firstItem="45K-vm-JPs" firstAttribute="top" secondItem="L3h-8S-tbl" secondAttribute="top" id="X2i-Ns-9Bs"/>
+                            <constraint firstItem="L3h-8S-tbl" firstAttribute="trailing" secondItem="45K-vm-JPs" secondAttribute="trailing" id="gty-ph-Rte"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="L3h-8S-tbl"/>
+                    </view>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <outlet property="playerView" destination="my1-eP-mKz" id="DWP-3f-2cq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8Qp-bL-hDJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3209" y="-950"/>
         </scene>
         <!--首页-->
         <scene sceneID="niT-yv-e8I">

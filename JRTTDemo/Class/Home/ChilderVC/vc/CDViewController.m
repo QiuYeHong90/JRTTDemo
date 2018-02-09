@@ -6,6 +6,7 @@
 //  Copyright © 2018年 袁书辉. All rights reserved.
 //
 
+#import "DetailZBViewController.h"
 #import "TWTableViewCell.h"
 
 
@@ -45,20 +46,38 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    Data* obj = self.dataArray[indexPath.row];
+    
     
     NSString * CellInentifer = @"ImgLeftTableViewCell";
-    if ([obj hasImage_list]) {
-        NSInteger count = [obj.model[@"image_list"] count];
-        if (count==3) {
+    NSInteger flag = [[self class] JudgeNumWithDataArr:self.dataArray IndexPath:indexPath];
+    
+    switch (flag) {
+        case 0:
+        {
+            CellInentifer = @"ImgLeftTableViewCell";
+        }
+            break;
+        case 1:
+        {
             CellInentifer = @"ImgBottomTableViewCell";
         }
-        if (count==1) {
+            break;
+        case 2:
+        {
             CellInentifer = @"ImgBottomOneTableViewCell";
         }
-        
-    }else{
-        CellInentifer = @"ImgLeftTableViewCell";
+            break;
+        case 3:
+        {
+            CellInentifer = @"ZhiBoTableViewCell";
+        }
+            break;
+            
+        default:
+        {
+            CellInentifer = @"ImgLeftTableViewCell";
+        }
+            break;
     }
     
     
@@ -72,6 +91,42 @@
     
     return cell;
 }
+
+/**
+ 判断是什么类型的
+
+ @param dataArray 数组
+ @param indexPath 索引
+ @return 0 左边文字右边图片  1 下边三张图片 2下面一张图片 3 直播
+ */
++(NSInteger)JudgeNumWithDataArr:(NSMutableArray *)dataArray IndexPath:(NSIndexPath *)indexPath
+{
+    Data* obj = dataArray[indexPath.row];
+    
+    
+    if ([obj hasImage_list]) {
+        NSInteger count = [obj.model[@"image_list"] count];
+        if (count==3) {
+            return 1;
+        }
+        if (count==1) {
+            return 2;
+        }
+        
+    }else{
+        
+        
+        if (obj.model[@"background"][@"video"][@"covers"]) {
+            return 3;
+        }else{
+            return 0;
+        }
+    }
+    
+    return 0;
+    
+}
+
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -94,6 +149,55 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+    NSInteger flag = [[self class] JudgeNumWithDataArr:self.dataArray IndexPath:indexPath];
+    Data* obj = self.dataArray[indexPath.row];
+    
+    switch (flag) {
+        case 0:
+        {
+            
+        }
+            break;
+        case 1:
+        {
+            
+        }
+            break;
+        case 2:
+        {
+            
+        }
+            break;
+        case 3:
+        {
+//            直播
+            DetailZBViewController * vc = [self.storyboard instantiateViewControllerWithIdentifier:@"DetailZBViewController"];
+            vc.live_id = obj.model[@"live_id"];
+            
+            self.navigationController.hidesBottomBarWhenPushed = YES;
+            self.navigationController.navigationBarHidden = YES;
+            
+            [self.navigationController pushViewController:vc animated:YES];
+        }
+            break;
+            
+        default:
+        {
+            
+        }
+            break;
+    }
+    
+    
+    
+
+}
+
+
 
 
 @end

@@ -151,6 +151,14 @@
         CGFloat maxH = MAX(title_h, leftImgH);
         return maxH+10+36;
     }else{
+        
+        if (self.model[@"background"][@"video"][@"covers"]) {
+            CGFloat w = SCREEN_WIDTH - (10+10);
+            CGFloat title_h = [title heightForFont:[UIFont systemFontOfSize:16] width:w];
+            return  title_h+224+44;
+        }
+        
+        
         CGFloat w = SCREEN_WIDTH - (10+10);
         CGFloat title_h = [title heightForFont:[UIFont systemFontOfSize:16] width:w];
         return title_h+10+36;
