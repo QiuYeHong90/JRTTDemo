@@ -11,14 +11,14 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="HomeMenuCollectionViewCell" id="gTV-IL-0wX" customClass="HomeMenuCollectionViewCell">
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="AAACollectionViewCell" id="soc-zv-rCt" customClass="AAACollectionViewCell">
             <rect key="frame" x="0.0" y="0.0" width="218" height="50"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                 <rect key="frame" x="0.0" y="0.0" width="218" height="50"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u00-nb-meC">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zFe-Dc-lEt">
                         <rect key="frame" x="0.0" y="0.0" width="218" height="50"/>
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <nil key="textColor"/>
@@ -26,16 +26,16 @@
                     </label>
                 </subviews>
             </view>
-            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <color key="backgroundColor" red="0.95294117649999999" green="0.2784313725" blue="0.2784313725" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="u00-nb-meC" secondAttribute="trailing" id="6EI-W0-wUx"/>
-                <constraint firstItem="u00-nb-meC" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="lfi-1R-ilQ"/>
-                <constraint firstAttribute="bottom" secondItem="u00-nb-meC" secondAttribute="bottom" id="lwn-6D-yHm"/>
-                <constraint firstItem="u00-nb-meC" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="nFs-2i-oGt"/>
+                <constraint firstItem="zFe-Dc-lEt" firstAttribute="top" secondItem="soc-zv-rCt" secondAttribute="top" id="2ZO-fY-P4C"/>
+                <constraint firstItem="zFe-Dc-lEt" firstAttribute="leading" secondItem="soc-zv-rCt" secondAttribute="leading" id="7pt-92-11r"/>
+                <constraint firstAttribute="trailing" secondItem="zFe-Dc-lEt" secondAttribute="trailing" id="ni5-il-uQt"/>
+                <constraint firstAttribute="bottom" secondItem="zFe-Dc-lEt" secondAttribute="bottom" id="wsP-TJ-UbA"/>
             </constraints>
             <size key="customSize" width="218" height="50"/>
             <connections>
-                <outlet property="title" destination="u00-nb-meC" id="U8R-Kw-OAW"/>
+                <outlet property="title" destination="zFe-Dc-lEt" id="8gr-tB-IMZ"/>
             </connections>
             <point key="canvasLocation" x="58" y="30"/>
         </collectionViewCell>

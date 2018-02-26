@@ -18,7 +18,7 @@
 
 +(instancetype)getViewWithNibSelectedBlock:(didSelectedBlock)SelectedBlock;
 
-
++(instancetype)getViewWithNibSelectedBlock:(didSelectedBlock)SelectedBlock cellIdentifer:(NSString *)cellIdentifer;
 -(void)clickIdx:(NSInteger)idx;
 
 @end

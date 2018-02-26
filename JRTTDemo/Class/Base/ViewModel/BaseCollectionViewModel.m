@@ -25,11 +25,15 @@
            cellIdentifer:(NSString *)cellIdentifer
         didSelectedBlock:(didSelectedBlock)didSelectedBlock
 {
+    
+    
     self.cellIdentifer = cellIdentifer;
     self.collectionView = collectionView;
+    collectionView.delegate = self;
+    collectionView.dataSource = self;
+    
     [self registerCell];
-    self.collectionView.delegate = self;
-    self.collectionView.dataSource = self;
+    
     self.dataArray = datayArray;
     self.callBlock = didSelectedBlock;
     

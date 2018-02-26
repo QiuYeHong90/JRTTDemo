@@ -17,7 +17,12 @@
 
 @implementation CollectionViewModel
 
-
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section;
+{
+    
+    NSInteger count = self.dataArray.count;
+    return count;
+}
 
 
 - (__kindof UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
@@ -37,6 +42,7 @@
 
 -(void)clickIdx:(NSInteger)idx
 {
+    
     self.selectedIdx = idx;
     NSIndexPath * idxPath = [NSIndexPath indexPathForRow:idx inSection:0];
     [self.collectionView scrollToItemAtIndexPath:idxPath atScrollPosition:UICollectionViewScrollPositionCenteredHorizontally animated:YES];
@@ -55,9 +61,21 @@
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-//    T1Data * str = self.dataArray[indexPath.row];
-//    CGFloat w = [str.name widthForFont:[UIFont systemFontOfSize:15]];
-    return CGSizeMake(10, 30);
+    
+    id  str = self.dataArray[indexPath.row];
+    
+    if ([str isKindOfClass:[T1Data class]] ) {
+        T1Data * str1 = (T1Data *)str;
+        CGFloat w = [str1.name widthForFont:[UIFont systemFontOfSize:15]];
+        return CGSizeMake(w+10,30);
+    }
+    if ([str isKindOfClass:[NSString class]] ) {
+        CGFloat w = [str widthForFont:[UIFont systemFontOfSize:15]];
+        return CGSizeMake(w+10,30);
+    }
+    
+//    return CGSizeMake(w+10,30);
+    return CGSizeMake(10,30);
 }
 - (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section
 {

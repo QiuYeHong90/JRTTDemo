@@ -13,6 +13,10 @@
 		FE20BD02201AD66B00BA07C8 /* HomeMenuCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE20BD00201AD66B00BA07C8 /* HomeMenuCollectionViewCell.xib */; };
 		FE20BD07201AE9EB00BA07C8 /* CDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE20BD06201AE9EB00BA07C8 /* CDViewController.m */; };
 		FE4D2032201F004000FBD21D /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE4D2031201F004000FBD21D /* HomeViewController.m */; };
+		FE679E792043B26900667A75 /* WeiTouTiaoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE679E782043B26900667A75 /* WeiTouTiaoViewController.m */; };
+		FE679E7D2043B2ED00667A75 /* SSHomeTopView.m in Sources */ = {isa = PBXBuildFile; fileRef = FE679E7C2043B2ED00667A75 /* SSHomeTopView.m */; };
+		FE679E812043B5FE00667A75 /* AAACollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FE679E7F2043B5FE00667A75 /* AAACollectionViewCell.m */; };
+		FE679E822043B5FE00667A75 /* AAACollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE679E802043B5FE00667A75 /* AAACollectionViewCell.xib */; };
 		FE75C7EC202809CB003C7D68 /* ContentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FE75C7EB202809CB003C7D68 /* ContentModel.m */; };
 		FE75C7EF20280D5B003C7D68 /* DataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FE75C7EE20280D5B003C7D68 /* DataModel.m */; };
 		FE75C7F82028457E003C7D68 /* HttpHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = FE75C7F72028457E003C7D68 /* HttpHelper.m */; };
@@ -88,6 +92,13 @@
 		FE20BD0A201B000B00BA07C8 /* MarcHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MarcHeader.h; sourceTree = "<group>"; };
 		FE4D2030201F004000FBD21D /* HomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		FE4D2031201F004000FBD21D /* HomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		FE679E772043B26900667A75 /* WeiTouTiaoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WeiTouTiaoViewController.h; sourceTree = "<group>"; };
+		FE679E782043B26900667A75 /* WeiTouTiaoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WeiTouTiaoViewController.m; sourceTree = "<group>"; };
+		FE679E7B2043B2ED00667A75 /* SSHomeTopView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSHomeTopView.h; sourceTree = "<group>"; };
+		FE679E7C2043B2ED00667A75 /* SSHomeTopView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSHomeTopView.m; sourceTree = "<group>"; };
+		FE679E7E2043B5FE00667A75 /* AAACollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AAACollectionViewCell.h; sourceTree = "<group>"; };
+		FE679E7F2043B5FE00667A75 /* AAACollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AAACollectionViewCell.m; sourceTree = "<group>"; };
+		FE679E802043B5FE00667A75 /* AAACollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AAACollectionViewCell.xib; sourceTree = "<group>"; };
 		FE75C7EA202809CB003C7D68 /* ContentModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ContentModel.h; sourceTree = "<group>"; };
 		FE75C7EB202809CB003C7D68 /* ContentModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ContentModel.m; sourceTree = "<group>"; };
 		FE75C7ED20280D5B003C7D68 /* DataModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataModel.h; sourceTree = "<group>"; };
@@ -230,6 +241,7 @@
 		FE4D202F201F002400FBD21D /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				FE679E762043B23E00667A75 /* TouTiao */,
 				FED45C49202D8EB4004670B1 /* DetailVC */,
 				FEB59FDE2029A2200003676D /* Base */,
 				FE4D2033201F009100FBD21D /* Home */,
@@ -267,6 +279,28 @@
 				FEB59FD420299E6A0003676D /* tableCell */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		FE679E762043B23E00667A75 /* TouTiao */ = {
+			isa = PBXGroup;
+			children = (
+				FE679E7A2043B2BA00667A75 /* TopView */,
+				FE679E772043B26900667A75 /* WeiTouTiaoViewController.h */,
+				FE679E782043B26900667A75 /* WeiTouTiaoViewController.m */,
+			);
+			path = TouTiao;
+			sourceTree = "<group>";
+		};
+		FE679E7A2043B2BA00667A75 /* TopView */ = {
+			isa = PBXGroup;
+			children = (
+				FE679E7B2043B2ED00667A75 /* SSHomeTopView.h */,
+				FE679E7C2043B2ED00667A75 /* SSHomeTopView.m */,
+				FE679E7E2043B5FE00667A75 /* AAACollectionViewCell.h */,
+				FE679E7F2043B5FE00667A75 /* AAACollectionViewCell.m */,
+				FE679E802043B5FE00667A75 /* AAACollectionViewCell.xib */,
+			);
+			path = TopView;
 			sourceTree = "<group>";
 		};
 		FE75C7F520284557003C7D68 /* NetWork */ = {
@@ -637,6 +671,7 @@
 				FEB59FB0202936290003676D /* ImgLeftTableViewCell.xib in Resources */,
 				FED70A30202A97A3005D567A /* PlayBackCollectionViewCell.xib in Resources */,
 				FEE204C9201AC8D900E25B61 /* Assets.xcassets in Resources */,
+				FE679E822043B5FE00667A75 /* AAACollectionViewCell.xib in Resources */,
 				FEB59FC120295E5A0003676D /* ImgBottomOneTableViewCell.xib in Resources */,
 				FEB59FCA20298F3A0003676D /* README.md in Resources */,
 				FED45C48202D28CB004670B1 /* ZhiBoTableViewCell.xib in Resources */,
@@ -733,7 +768,9 @@
 				FEB59FE22029A23B0003676D /* BaseCollectionViewModel.m in Sources */,
 				FED45C4C202D8EDC004670B1 /* DetailZBViewController.m in Sources */,
 				FE75C7F82028457E003C7D68 /* HttpHelper.m in Sources */,
+				FE679E7D2043B2ED00667A75 /* SSHomeTopView.m in Sources */,
 				FE20BCFD201AD2A300BA07C8 /* CollectionViewModel.m in Sources */,
+				FE679E812043B5FE00667A75 /* AAACollectionViewCell.m in Sources */,
 				FEE204CF201AC8D900E25B61 /* main.m in Sources */,
 				FE4D2032201F004000FBD21D /* HomeViewController.m in Sources */,
 				FED70A34202A99BF005D567A /* PlayBackViewModel.m in Sources */,
@@ -746,6 +783,7 @@
 				FED70A2F202A97A3005D567A /* PlayBackCollectionViewCell.m in Sources */,
 				FEA35730201EBA2C009BDA4E /* JRTTabBarItem.m in Sources */,
 				FEE204F6201ACC0800E25B61 /* HomeMenuView.m in Sources */,
+				FE679E792043B26900667A75 /* WeiTouTiaoViewController.m in Sources */,
 				FEB59FC020295E5A0003676D /* ImgBottomOneTableViewCell.m in Sources */,
 				FEE204C1201AC8D900E25B61 /* AppDelegate.m in Sources */,
 				FE75C7EC202809CB003C7D68 /* ContentModel.m in Sources */,
@@ -917,7 +955,7 @@
 				DEVELOPMENT_TEAM = G6K2R77NE3;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/JRTTDemo/PrefixHeader.pch";
 				INFOPLIST_FILE = JRTTDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.qiurong.qiuqiuShop1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -934,7 +972,7 @@
 				DEVELOPMENT_TEAM = G6K2R77NE3;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/JRTTDemo/PrefixHeader.pch";
 				INFOPLIST_FILE = JRTTDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.qiurong.qiuqiuShop1;
 				PRODUCT_NAME = "$(TARGET_NAME)";

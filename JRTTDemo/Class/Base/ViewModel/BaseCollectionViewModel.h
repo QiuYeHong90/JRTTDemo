@@ -11,7 +11,7 @@ typedef void(^didSelectedBlock)(NSIndexPath *idxPath,NSMutableArray *dataArray);
 @interface BaseCollectionViewModel : NSObject<UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout>
 
 
-@property (nonatomic,weak) UICollectionView * collectionView;
+@property (nonatomic,strong) UICollectionView * collectionView;
 @property (nonatomic,copy) NSString * cellIdentifer;
 @property (nonatomic,strong) NSMutableArray * dataArray;
 @property (nonatomic,copy) didSelectedBlock callBlock;

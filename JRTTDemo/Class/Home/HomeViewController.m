@@ -43,7 +43,7 @@
             weakSelf.isShou = NO;
             weakSelf.selectedIdx = idxPath.row;
             [weakSelf changeVC:idxPath.row];
-        }];
+        } cellIdentifer:@"HomeMenuCollectionViewCell"];
     }
     
     return _menuView;
@@ -85,7 +85,7 @@
     }];
     
     
-    [self.MenuBottomView addSubview:self.menuView];
+    [self.view addSubview:self.menuView];
     
     __weak typeof(self) weakSelf = self;
     [self.menuView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -94,7 +94,9 @@
         make.right.equalTo(weakSelf.MenuBottomView);
         make.bottom.equalTo(weakSelf.MenuBottomView).offset(-1);
     }];
-  
+    
+    
+    
     self.scrollView.delegate = self;
     self.scrollView.bounces = NO;
     

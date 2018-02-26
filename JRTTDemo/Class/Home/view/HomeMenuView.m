@@ -30,14 +30,21 @@
 -(void)awakeFromNib
 {
     [super awakeFromNib];
-    self.flowLayout.minimumInteritemSpacing = 0.0001;
-    
+
+//    self.flowLayout.itemSize = CGSizeMake(20, 20);
     
 }
-
++(instancetype)getViewWithNibSelectedBlock:(didSelectedBlock)SelectedBlock cellIdentifer:(NSString *)cellIdentifer
+{
+    HomeMenuView * view = [self getViewWithNib];
+    
+    [view.viewModel setCollectionView:view.collectionView datayArray:@[].mutableCopy cellIdentifer:cellIdentifer didSelectedBlock:SelectedBlock];
+    return view;
+}
 +(instancetype)getViewWithNibSelectedBlock:(didSelectedBlock)SelectedBlock
 {
     HomeMenuView * view = [self getViewWithNib];
+    
     [view.viewModel setCollectionView:view.collectionView datayArray:@[].mutableCopy cellIdentifer:@"HomeMenuCollectionViewCell" didSelectedBlock:SelectedBlock];
     return view;
 }

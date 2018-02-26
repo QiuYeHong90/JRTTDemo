@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -27,7 +26,7 @@
                     </collectionViewFlowLayout>
                 </collectionView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CaQ-SQ-REj">
-                    <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GgK-lT-VMA">
                             <rect key="frame" x="8" y="10" width="24" height="24"/>
@@ -58,16 +57,15 @@
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstItem="QDO-MT-Hqb" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="BpL-UY-FbO"/>
-                <constraint firstItem="CaQ-SQ-REj" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="F1U-j8-paM"/>
+                <constraint firstItem="QDO-MT-Hqb" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="BpL-UY-FbO"/>
+                <constraint firstItem="CaQ-SQ-REj" firstAttribute="trailing" secondItem="iN0-l3-epB" secondAttribute="trailing" id="F1U-j8-paM"/>
                 <constraint firstItem="QDO-MT-Hqb" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="F2Z-ZK-Bkg"/>
-                <constraint firstItem="CaQ-SQ-REj" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="NBO-Eq-PIE"/>
-                <constraint firstItem="CaQ-SQ-REj" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="euf-PX-u2i"/>
-                <constraint firstItem="QDO-MT-Hqb" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="vT7-fq-cym"/>
+                <constraint firstItem="CaQ-SQ-REj" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="NBO-Eq-PIE"/>
+                <constraint firstItem="CaQ-SQ-REj" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="euf-PX-u2i"/>
+                <constraint firstItem="QDO-MT-Hqb" firstAttribute="trailing" secondItem="iN0-l3-epB" secondAttribute="trailing" id="vT7-fq-cym"/>
                 <constraint firstAttribute="bottom" secondItem="QDO-MT-Hqb" secondAttribute="bottom" id="vuK-bi-Kxp"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
                 <outlet property="collectionView" destination="QDO-MT-Hqb" id="4ul-sP-761"/>
                 <outlet property="flowLayout" destination="UU4-g1-A9h" id="nWx-up-tFq"/>
