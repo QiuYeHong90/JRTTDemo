@@ -10,5 +10,5 @@ pod 'SDWebImage', '~> 4.2.3'
 
 pod 'MJRefresh', '~> 3.1.15.3'
 
-
+pod 'ZFPlayer'
 end 
